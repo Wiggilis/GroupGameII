@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Rigidbody cubeRogidbody;
+    public Rigidbody cubeRigidbody;
     public float forcesPower;
     private bool Wispress = false;
     private bool Aispress = false;
@@ -19,22 +19,22 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate() {
         if (Wispress == true)
         {
-            cubeRogidbody.AddForce(Vector3.forward * forcesPower);
+            cubeRigidbody.AddForce(Vector3.forward * forcesPower);
             Wispress = false;
         }
         if (Sispress == true)
         {
-            cubeRogidbody.AddForce(Vector3.back * forcesPower);
+            cubeRigidbody.AddForce(Vector3.back * forcesPower);
             Sispress = false;
         }
         if (Aispress == true)
         {
-            cubeRogidbody.AddForce(Vector3.left * forcesPower);
+            cubeRigidbody.AddForce(Vector3.left * forcesPower);
             Aispress = false;
         }
         if (Dispress == true)
         {
-            cubeRogidbody.AddForce(Vector3.right * forcesPower);
+            cubeRigidbody.AddForce(Vector3.right * forcesPower);
             Dispress = false;
         }
     }
