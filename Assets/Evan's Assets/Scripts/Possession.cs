@@ -15,9 +15,4 @@ public class Possession : MonoBehaviour
     {
         
     }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        
-    }
 }
