@@ -6,8 +6,8 @@ public class PlayerPossesiom : MonoBehaviour
 {
     public MeshRenderer playerMR;
     public GameObject playerMovement;
-    public GameObject humanpossesion1;
     public GameObject walls;
+    private GameObject people;
     
   
     // Start is called before the first frame update
@@ -21,26 +21,31 @@ public class PlayerPossesiom : MonoBehaviour
     {
         Ray toMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit rhinfo;
+        RaycastHit rhinfom;
         bool didgit = Physics.Raycast(toMouse, out rhinfo, 500.0f);
 
+        print(rhinfo.collider.gameObject.tag);
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            if (rhinfo.collider.name == "Human") {
+            if (rhinfo.collider.tag == "Human") {
                 playerMR.enabled = false;
                 playerMovement.GetComponent<PlayerMovement>().enabled = false;
-                humanpossesion1.GetComponent<Possession>().humanpossision = true;
-                playerMovement.GetComponent<WalktoWall>();
-                
+                rhinfom = rhinfo;
+                if (rhinfo.collider.GetComponent<HumanMovenet>() != null) {
+                    rhinfo.collider.GetComponent<HumanMovenet>().enabled = true;
+                }
             }
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            if (rhinfo.collider.name != "Human") {
+            if (rhinfo.collider.tag != "Human") {
                 playerMR.enabled = true;
                 playerMovement.GetComponent<PlayerMovement>().enabled = true;
-                humanpossesion1.GetComponent<Possession>().humanpossision = false;
+                if (rhinfo.collider.GetComponent<HumanMovenet>() != null) {
+                    rhinfo.collider.GetComponent<HumanMovenet>().enabled = false;
+                }
             }
         }
 
