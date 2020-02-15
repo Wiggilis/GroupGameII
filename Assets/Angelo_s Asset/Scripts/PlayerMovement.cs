@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private bool Aispress = false;
     private bool Sispress = false;
     private bool Dispress = false;
+    public bool endgame = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +57,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             Dispress = true;
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        print(collision.collider.name);
+        if(collision.collider.tag == "Portal")
+        {
+            endgame = true;
+
         }
     }
 }

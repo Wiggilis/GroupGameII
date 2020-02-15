@@ -7,15 +7,18 @@ public class CandleText : MonoBehaviour
 {
     private int candles = 0;
     public Text candlesFound;
+    public GameObject ControllerRef;
+    
  
     // Update is called once per frame
     void Update()
     {
-        candlesFound.text = "Candles Found: " + candles;
-
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            candles++;
-        }
+        
+        candlesFound.text = "Candles Found: " + ControllerRef.GetComponent<GameController>().counter;
+   
+       
     }
+
+   
+      
 }

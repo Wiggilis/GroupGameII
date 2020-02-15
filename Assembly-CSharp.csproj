@@ -69,6 +69,7 @@
     <Compile Include="Assets\Angelo_s Asset\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\PlayerPossesiom.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\WalktoWall.cs" />
+    <Compile Include="Assets\Zach_s Assets\Scripts\CandleText.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/ACER/Desktop/Digtal Game Desgin/GroupGameII/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
