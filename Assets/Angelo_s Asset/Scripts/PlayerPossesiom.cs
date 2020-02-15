@@ -38,14 +38,13 @@ public class PlayerPossesiom : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            if (rhinfo.collider.tag != "Human") {
+            if (rhinfo.collider.tag == "Human") {
                 playerMR.enabled = true;
                 playerMovement.GetComponent<PlayerMovement>().enabled = true;
-                if (rhinfo.collider.GetComponent<HumanMovenet>() != null) {
-                    rhinfo.collider.GetComponent<HumanMovenet>().enabled = false;
-                }
+                rhinfo.collider.GetComponent<HumanMovenet>().enabled = false;
+                
             }
         }
 
