@@ -10,6 +10,9 @@ public class HumanMovenet : MonoBehaviour
     private bool Aispress = false;
     private bool Sispress = false;
     private bool Dispress = false;
+    public float Speed = 10.0f;
+    public float RotationSpeed = 100.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +21,7 @@ public class HumanMovenet : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Wispress == true)
+        /*if (Wispress == true)
         {
             cubeRigidbody.AddForce(Vector3.forward * forcesPower);
             Wispress = false;
@@ -37,12 +40,12 @@ public class HumanMovenet : MonoBehaviour
         {
             cubeRigidbody.AddForce(Vector3.right * forcesPower);
             Dispress = false;
-        }
+        }*/
     }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        /*if (Input.GetKey(KeyCode.W))
         {
             Wispress = true;
         }
@@ -57,6 +60,22 @@ public class HumanMovenet : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             Dispress = true;
-        }
+        }*/
+
+        HumanMovement();
+    }
+
+    void HumanMovement()
+    {
+        float translationx = Input.GetAxis("Horizontal") * Speed;
+        float translationz = Input.GetAxis("Vertical") * Speed;
+        float inputy = Input.GetAxis("RightStickVertical") * Speed;
+        float rotation = Input.GetAxis("RightStickHorizontal") * RotationSpeed;
+        translationx *= Time.deltaTime;
+        translationz *= Time.deltaTime;
+        inputy *= Time.deltaTime;
+        rotation *= Time.deltaTime;
+        transform.Translate(translationx, inputy, translationz);
+        transform.Rotate(0, rotation, 0);
     }
 }
