@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class CandleText : MonoBehaviour
 {
-    private int candles = 0;
     public Text candlesFound;
     public GameObject ControllerRef;
     
@@ -14,7 +13,7 @@ public class CandleText : MonoBehaviour
     void Update()
     {
         
-        candlesFound.text = "Candles Found: " + ControllerRef.GetComponent<GameController>().counter;
+        candlesFound.text = "Candles Found: " + ControllerRef.GetComponent<GameController>().counter + "/3";
    
        
     }
