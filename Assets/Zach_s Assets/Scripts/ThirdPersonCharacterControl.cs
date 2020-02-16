@@ -36,5 +36,13 @@ public class ThirdPersonCharacterControl : MonoBehaviour
         {
             Collision.gameObject.GetComponent<BoxCollider>().enabled = false;
         }
+        if (Collision.gameObject.tag == "GameObject")
+        {
+            Collision.gameObject.GetComponent<Collider>().enabled = false;
+        }
+        if (Collision.gameObject.tag == "Human")
+        {
+            Collision.gameObject.GetComponent<Collider>().enabled = false;
+        }
     }
 }

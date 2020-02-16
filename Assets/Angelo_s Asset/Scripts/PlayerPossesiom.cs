@@ -5,9 +5,12 @@ using UnityEngine;
 public class PlayerPossesiom : MonoBehaviour
 {
     public MeshRenderer playerMR;
-    public GameObject playerMovement;
+    public GameObject player;
+    public GameObject camera;
     public GameObject walls;
     private GameObject people;
+
+    private Transform playerposition;
     
   
     // Start is called before the first frame update
@@ -30,7 +33,9 @@ public class PlayerPossesiom : MonoBehaviour
         {
             if (rhinfo.collider.tag == "Human") {
                 playerMR.enabled = false;
-                playerMovement.GetComponent<PlayerMovement>().enabled = false;
+                player.GetComponent<ThirdPersonCharacterControl>().enabled = false;
+                camera.GetComponent<CameraScript>().CameraFollowObj = rhinfo.collider.GetComponent<CameraGuideRefernce>().CamGuideRef;
+                camera.transform.rotation = rhinfo.collider.transform.rotation;
                 rhinfom = rhinfo;
                 if (rhinfo.collider.GetComponent<HumanMovenet>() != null) {
                     rhinfo.collider.GetComponent<HumanMovenet>().enabled = true;
@@ -42,9 +47,11 @@ public class PlayerPossesiom : MonoBehaviour
         {
             if (rhinfo.collider.tag == "Human") {
                 playerMR.enabled = true;
-                playerMovement.GetComponent<PlayerMovement>().enabled = true;
+                player.GetComponent<ThirdPersonCharacterControl>().enabled = true;
                 rhinfo.collider.GetComponent<HumanMovenet>().enabled = false;
-                
+                camera.GetComponent<CameraScript>().CameraFollowObj = player.GetComponent<CameraGuideRefernce>().CamGuideRef;
+                camera.transform.rotation = player.transform.rotation;
+                player.transform.position = rhinfo.collider.transform.position;
             }
         }
 
