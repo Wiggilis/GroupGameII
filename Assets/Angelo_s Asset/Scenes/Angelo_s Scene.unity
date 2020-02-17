@@ -692,6 +692,7 @@ MonoBehaviour:
   playerref: {fileID: 1175836826}
   youWinRef: {fileID: 517927005}
   restartButtonRef: {fileID: 1481161624}
+  backgroundref: {fileID: 0}
 --- !u!4 &444310270 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8179222967833178016, guid: 933b14485d0b7ef448b35891478f6fb0,
@@ -870,7 +871,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -577, y: 287}
+  m_AnchoredPosition: {x: -583, y: 287}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &517927007

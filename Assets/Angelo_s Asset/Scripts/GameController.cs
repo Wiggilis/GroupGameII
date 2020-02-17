@@ -14,14 +14,14 @@ public class GameController : MonoBehaviour
     public GameObject playerref;
     public GameObject youWinRef;
     public GameObject restartButtonRef;
-    public GameObject 
+    public GameObject backgroundref;
     
 
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
         
-    }
+    }*/
 
     // Update is called once per frame
     void FixedUpdate()
