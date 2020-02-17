@@ -15,13 +15,13 @@ public class GameController : MonoBehaviour
     public GameObject youWinRef;
     public GameObject restartButtonRef;
     public GameObject backgroundref;
-    
+    public bool restartbuttons = false;
 
     // Start is called before the first frame update
-    /*void Start()
+    void Start()
     {
-        
-    }*/
+       
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -30,11 +30,22 @@ public class GameController : MonoBehaviour
 
             portal.GetComponent<MeshRenderer>().enabled = true;
             portal.GetComponent<CapsuleCollider>().enabled = true;
+            
 
         }
         if (playerref.GetComponent<PlayerMovement>().endgame == true) {
-            
-            SceneManager.LoadScene("Angelo_s Scene");
+            backgroundref.GetComponent<Image>().enabled = true;
+            restartButtonRef.GetComponent<Image>().enabled = true;
+            restartButtonRef.GetComponent<Button>().enabled = true;
+            restartButtonRef.GetComponentInChildren<Text>().enabled = true;
+            youWinRef.GetComponent<Text>().enabled = true;
+
+             buttonclicked();
+
+            if (restartbuttons == true){
+
+                SceneManager.LoadScene("Angelo_s Scene");
+            }
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -44,7 +55,11 @@ public class GameController : MonoBehaviour
 
     }
 
-        
+    public void buttonclicked() {
+        if (Input.GetKey(KeyCode.Mouse0)) {
+            restartbuttons = true;
+        }
+    }
     
  
 }
