@@ -14,6 +14,8 @@ public class PlayerPossesiom : MonoBehaviour
     private Transform playerposition;
 
     RaycastHit rhinfo;
+    public bool isGhost = true;
+    private bool isClick = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,17 +28,23 @@ public class PlayerPossesiom : MonoBehaviour
 
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
-        {        
-            GetRayInfo();
-            if (rhinfo.collider.tag == "Human") {
-                playerMR.enabled = false;
-                player.GetComponent<ThirdPersonCharacterControl>().enabled = false;
-                camera.GetComponent<CameraScript>().CameraFollowObj = rhinfo.collider.GetComponent<CameraGuideRefernce>().CamGuideRef;
-                camera.transform.rotation = rhinfo.collider.transform.rotation;
-                if (rhinfo.collider.GetComponent<HumanMovenet>() != null) {
-                    rhinfo.collider.GetComponent<HumanMovenet>().enabled = true;
+        {
+            isClick = true;
+            if (isClick && isGhost)
+                GetRayInfo();
+                if (rhinfo.collider.tag == "Human")
+                {
+                    playerMR.enabled = false;
+                    player.GetComponent<ThirdPersonCharacterControl>().enabled = false;
+                    camera.GetComponent<CameraScript>().CameraFollowObj = rhinfo.collider.GetComponent<CameraGuideRefernce>().CamGuideRef;
+                    camera.transform.rotation = rhinfo.collider.transform.rotation;
+                    isGhost = false;
+                    if (rhinfo.collider.GetComponent<HumanMovenet>() != null)
+                    {
+                        rhinfo.collider.GetComponent<HumanMovenet>().enabled = true;
+                    }
                 }
-            }
+            
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
@@ -47,7 +55,8 @@ public class PlayerPossesiom : MonoBehaviour
                 player.transform.position = rhinfo.collider.transform.position;
                 camera.transform.rotation = player.transform.rotation;
                 camera.GetComponent<CameraScript>().CameraFollowObj = player.GetComponent<CameraGuideRefernce>().CamGuideRef;
-         
+                isGhost = true;
+
         }
 
     }
