@@ -10,7 +10,7 @@ public class ThirdPersonCharacterControl : MonoBehaviour
     public float Speed = 10.0f;
     public float RotationSpeed = 100.0f;
 
-	void Update ()
+	void FixedUpdate ()
     {
         PlayerMovement();
     }

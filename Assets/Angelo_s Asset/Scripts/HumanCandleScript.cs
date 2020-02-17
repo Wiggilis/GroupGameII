@@ -23,7 +23,8 @@ public class HumanCandleScript : MonoBehaviour
     {
         if (collision.collider.tag == "GameObject") {
             Destroy(collision.gameObject);
-            GameControllerRef.GetComponent<GameController>().fuctionwascalled = true;
+            GameControllerRef.GetComponent<GameController>().counter++;
+            print(GameControllerRef.GetComponent<GameController>().counter);
         }   
     }
 }

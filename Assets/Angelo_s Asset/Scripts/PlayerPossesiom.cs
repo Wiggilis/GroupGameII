@@ -20,7 +20,7 @@ public class PlayerPossesiom : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Ray toMouse = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit rhinfo;

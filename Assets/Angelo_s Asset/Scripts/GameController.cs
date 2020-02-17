@@ -12,6 +12,9 @@ public class GameController : MonoBehaviour
     public Text candlesFound;
     public GameObject portal;
     public GameObject playerref;
+    public GameObject youWinRef;
+    public GameObject restartButtonRef;
+    public GameObject 
     
 
     // Start is called before the first frame update
@@ -21,7 +24,7 @@ public class GameController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (counter == 3) {
 
@@ -30,24 +33,18 @@ public class GameController : MonoBehaviour
 
         }
         if (playerref.GetComponent<PlayerMovement>().endgame == true) {
+            
             SceneManager.LoadScene("Angelo_s Scene");
         }
-
-        if (fuctionwascalled == true) {
-            Addcounter();
-        }
-        /*if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             counter++;
-        }*/
+        }
+        
 
     }
 
-    void Addcounter() {
-
-        counter++;
-        print(counter);
-        fuctionwascalled = false;
+        
     
-    }
+ 
 }

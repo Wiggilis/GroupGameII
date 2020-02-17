@@ -41,6 +41,8 @@ public class HumanMovenet : MonoBehaviour
             cubeRigidbody.AddForce(Vector3.right * forcesPower);
             Dispress = false;
         }*/
+        
+        HumanMovement();
     }
     // Update is called once per frame
     void Update()
@@ -62,7 +64,7 @@ public class HumanMovenet : MonoBehaviour
             Dispress = true;
         }*/
 
-        HumanMovement();
+        
     }
 
     void HumanMovement()
