@@ -68,6 +68,7 @@
     <Compile Include="Assets\Angelo_s Asset\Scripts\HumanMovenet.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\PlayerPossesiom.cs" />
+    <Compile Include="Assets\Angelo_s Asset\Scripts\TurnOffLight.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\WalktoWall.cs" />
     <Compile Include="Assets\CameraGuideReference.cs" />
     <Compile Include="Assets\Zach_s Assets\Scripts\CameraCollision.cs" />

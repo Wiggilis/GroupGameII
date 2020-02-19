@@ -10,18 +10,13 @@ public class PlayerPossesiom : MonoBehaviour
     public GameObject walls;
     public GameObject cursor;
     private GameObject people;
-
     private Transform playerposition;
-
     RaycastHit rhinfo;
     public bool isGhost = true;
     private bool isClick = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
+
+   
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -30,8 +25,11 @@ public class PlayerPossesiom : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             isClick = true;
+
             if (isClick && isGhost)
+            {
                 GetRayInfo();
+
                 if (rhinfo.collider.tag == "Human")
                 {
                     playerMR.enabled = false;
@@ -44,11 +42,26 @@ public class PlayerPossesiom : MonoBehaviour
                         rhinfo.collider.GetComponent<HumanMovenet>().enabled = true;
                     }
                 }
+                
+            }
+
+            if (rhinfo.collider.tag == "LightSource")
+            {
+
+                rhinfo.collider.GetComponent<TurnOffLight>().lightRef.SetActive(false);
+
+            }
             
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
+                if (rhinfo.collider.tag == "LightSource") {
+
+                rhinfo.collider.GetComponent<TurnOffLight>().lightRef.SetActive(true);
+
+                }
+                
                 playerMR.enabled = true;
                 player.GetComponent<ThirdPersonCharacterControl>().enabled = true;
                 rhinfo.collider.GetComponent<HumanMovenet>().enabled = false;
@@ -59,6 +72,10 @@ public class PlayerPossesiom : MonoBehaviour
 
         }
 
+        
+        
+      
+       
     }
 
     void GetRayInfo()

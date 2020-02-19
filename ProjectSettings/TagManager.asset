@@ -9,6 +9,7 @@ TagManager:
   - Human
   - GameObject
   - Portal
+  - LightSource
   layers:
   - Default
   - TransparentFX
