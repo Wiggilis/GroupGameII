@@ -345,15 +345,15 @@ InputManager:
     m_Name: RightStickVertical
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: left shift
-    positiveButton: left ctrl
-    altNegativeButton: right shift
-    altPositiveButton: 
+    negativeButton: q
+    positiveButton: e
+    altNegativeButton: left shift
+    altPositiveButton: space
     gravity: 1
     dead: 0.19
     sensitivity: 1
     snap: 0
-    invert: 1
+    invert: 0
     type: 0
     axis: 0
     joyNum: 0

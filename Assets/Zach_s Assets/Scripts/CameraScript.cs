@@ -32,7 +32,7 @@ public class CameraScript : MonoBehaviour
     void FixedUpdate()
     {
         //sets up rotation of sticks
-        float rotation = Input.GetAxis("RightStickHorizontal") * RotationSpeed;
+        float rotation = Input.GetAxis("Horizontal") * RotationSpeed;
         mouseX = Input.GetAxis("Mouse X");
         mouseY = Input.GetAxis("Mouse Y");
         rotation *= Time.deltaTime;

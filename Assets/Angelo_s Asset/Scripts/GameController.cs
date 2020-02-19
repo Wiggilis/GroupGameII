@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    public GameObject CursorImage;
     public GameObject humanCandleRef;
     public bool fuctionwascalled = false;
     public int counter = 0;
@@ -20,9 +21,14 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
+    private void Update()
+    {
+        CursorImage.transform.position = Input.mousePosition;
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -47,7 +53,7 @@ public class GameController : MonoBehaviour
                 SceneManager.LoadScene("Angelo_s Scene");
             }
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             counter++;
         }
