@@ -14,8 +14,10 @@ public class PlayerPossesiom : MonoBehaviour
     RaycastHit rhinfo;
     public bool isGhost = true;
     private bool isClick = false;
+    public float timer = 0;
+    public GameObject roomref;    
 
-
+    
    
     // Update is called once per frame
     void FixedUpdate()
@@ -28,10 +30,11 @@ public class PlayerPossesiom : MonoBehaviour
 
             if (isClick && isGhost)
             {
+                
                 GetRayInfo();
 
-                if (rhinfo.collider.tag == "Human")
-                {
+                if (rhinfo.collider.tag == "Human" && roomref.GetComponent<BoxOverLay>().hitColliders[2].GetComponentInChildren<SpriteRenderer>().enabled == true)
+                 {
                     playerMR.enabled = false;
                     player.GetComponent<ThirdPersonCharacterControl>().enabled = false;
                     camera.GetComponent<CameraScript>().CameraFollowObj = rhinfo.collider.GetComponent<CameraGuideRefernce>().CamGuideRef;
@@ -41,7 +44,8 @@ public class PlayerPossesiom : MonoBehaviour
                     {
                         rhinfo.collider.GetComponent<HumanMovenet>().enabled = true;
                     }
-                }
+                  }
+                
                 
             }
 
@@ -49,10 +53,19 @@ public class PlayerPossesiom : MonoBehaviour
             {
 
                 rhinfo.collider.GetComponent<TurnOffLight>().lightRef.SetActive(false);
+                roomref.GetComponent<BoxOverLay>().hitColliders[2].GetComponentInChildren<SpriteRenderer>().enabled = true;
+                while (timer * Time.deltaTime < 600 * Time.deltaTime) {
 
+                    print(timer);
+                    roomref.GetComponent<BoxOverLay>().hitColliders[2].GetComponentInChildren<SpriteRenderer>().enabled = false;
+                    timer++;
+                }
             }
+
             
         }
+
+
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
@@ -72,10 +85,6 @@ public class PlayerPossesiom : MonoBehaviour
 
         }
 
-        
-        
-      
-       
     }
 
     void GetRayInfo()
@@ -85,4 +94,5 @@ public class PlayerPossesiom : MonoBehaviour
 
         print(rhinfo.collider.gameObject.tag);
     }
+
 }

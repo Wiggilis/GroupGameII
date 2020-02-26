@@ -16,12 +16,5 @@ public class TurnOffLight : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKey(KeyCode.Mouse0)) { 
-        
-            
-
-        }
-
-
     }
 }
