@@ -32,11 +32,13 @@ public class CameraScript : MonoBehaviour
     void FixedUpdate()
     {
         //sets up rotation of sticks
-        float rotation = Input.GetAxis("Horizontal") * RotationSpeed;
+        float rotationX = Input.GetAxis("Mouse X") * RotationSpeed;
+        float rotationY = Input.GetAxis("Mouse Y") * RotationSpeed;
         mouseX = Input.GetAxis("Mouse X");
         mouseY = Input.GetAxis("Mouse Y");
-        rotation *= Time.deltaTime;
-        transform.Rotate(0, rotation, 0);
+        rotationX *= Time.deltaTime;
+        rotationY *= Time.deltaTime;
+        transform.Rotate(0, rotationX, 0);
 
 
     }
@@ -48,9 +50,17 @@ public class CameraScript : MonoBehaviour
 
     void CameraUpdater()
     {
-        Transform target = CameraFollowObj.transform;
+        Transform targetPOS = CameraFollowObj.transform;
+
+        // Determine which direction to rotate towards
+        Vector3 targetDirection = targetPOS.position - transform.position;
 
         float step = CameraMoveSpeed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards (transform.position, target.position, step);
+        
+        // Moves toward the target position
+        transform.position = Vector3.MoveTowards (transform.position, targetPOS.position, step);
+
+        //transform.Rotate(Vector3.right, rotation * Time.deltaTime, Space.World);
+
     }
 }

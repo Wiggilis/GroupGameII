@@ -33,7 +33,7 @@ public class PlayerPossesiom : MonoBehaviour
                 
                 GetRayInfo();
 
-                if (rhinfo.collider.tag == "Human" && roomref.GetComponent<BoxOverLay>().hitColliders[2].GetComponentInChildren<SpriteRenderer>().enabled == true)
+                if (rhinfo.collider.tag == "Human" /*&& roomref.GetComponent<BoxOverLay>().hitColliders[2].GetComponentInChildren<SpriteRenderer>().enabled == true*/)
                  {
                     playerMR.enabled = false;
                     player.GetComponent<ThirdPersonCharacterControl>().enabled = false;
