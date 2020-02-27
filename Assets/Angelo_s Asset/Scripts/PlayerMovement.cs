@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     private bool Sispress = false;
     private bool Dispress = false;
     public bool endgame = false;
+    public int ghostNumber;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,5 +69,11 @@ public class PlayerMovement : MonoBehaviour
             endgame = true;
 
         }
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        ghostNumber = other.gameObject.GetComponent<RoomNumber>().roomNumberRef;
     }
 }

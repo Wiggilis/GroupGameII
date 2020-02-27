@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{32050209-B10F-E4D0-8F82-2ACC50852D24}</ProjectGuid>
+    <ProjectGuid>{E512F951-55DB-377A-C227-CBB0B7BA0518}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -66,9 +66,11 @@
     <Compile Include="Assets\Angelo_s Asset\Scripts\GameController.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\HumanCandleScript.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\HumanMovenet.cs" />
+    <Compile Include="Assets\Angelo_s Asset\Scripts\HumanRoomNum.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\PlayerPossesiom.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\Room.cs" />
+    <Compile Include="Assets\Angelo_s Asset\Scripts\RoomNumber.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\TurnOffLight.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\WalktoWall.cs" />
     <Compile Include="Assets\CameraGuideReference.cs" />
@@ -86,31 +88,31 @@
     <Compile Include="Assets\Zach_s Assets\Scripts\Unused Scripts\[UnUsed]FollowScript.cs" />
     <Compile Include="Assets\Zach_s Assets\Scripts\Unused Scripts\[UnUsed]ThirdPersonCameraControl.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/Sanchean/Desktop/GroupGameII-master/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/Sanchean/Desktop/GroupGameII/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/Sanchean/Desktop/GroupGameII-master/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/Sanchean/Desktop/GroupGameII/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Sanchean/Desktop/GroupGameII-master/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Sanchean/Desktop/GroupGameII/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Sanchean/Desktop/GroupGameII-master/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/Sanchean/Desktop/GroupGameII/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/Sanchean/Desktop/GroupGameII-master/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/Sanchean/Desktop/GroupGameII/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Sanchean/Desktop/GroupGameII-master/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Sanchean/Desktop/GroupGameII/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/Sanchean/Desktop/GroupGameII-master/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/Sanchean/Desktop/GroupGameII/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Sanchean/Desktop/GroupGameII-master/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Sanchean/Desktop/GroupGameII/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/Sanchean/Desktop/GroupGameII-master/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/Sanchean/Desktop/GroupGameII/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.19f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
