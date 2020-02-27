@@ -14,15 +14,16 @@ public class PlayerPossesiom : MonoBehaviour
     RaycastHit rhinfo;
     public bool isGhost = true;
     private bool isClick = false;
-    public float timer = 0;
-    public GameObject roomref;    
+    public float alertTimer = 15;
+    public GameObject roomref;
+    int num = 0;
+ 
 
     
    
     // Update is called once per frame
     void FixedUpdate()
     {
-
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -33,39 +34,51 @@ public class PlayerPossesiom : MonoBehaviour
                 
                 GetRayInfo();
 
-                if (rhinfo.collider.tag == "Human" /*&& roomref.GetComponent<BoxOverLay>().hitColliders[2].GetComponentInChildren<SpriteRenderer>().enabled == true*/)
+                if (rhinfo.collider.tag == "Human" && rhinfo.collider.GetComponentInChildren<SpriteRenderer>().enabled == true)
                  {
                     playerMR.enabled = false;
                     player.GetComponent<ThirdPersonCharacterControl>().enabled = false;
                     camera.GetComponent<CameraScript>().CameraFollowObj = rhinfo.collider.GetComponent<CameraGuideRefernce>().CamGuideRef;
                     camera.transform.rotation = rhinfo.collider.transform.rotation;
                     isGhost = false;
+
+                    
+
                     if (rhinfo.collider.GetComponent<HumanMovenet>() != null)
                     {
                         rhinfo.collider.GetComponent<HumanMovenet>().enabled = true;
                     }
-                  }
+                    
                 
                 
             }
 
-            if (rhinfo.collider.tag == "LightSource")
-            {
+                if (rhinfo.collider.tag == "LightSource")
+                {
+                    num = 0;
+                    alertTimer = 15;
 
-                rhinfo.collider.GetComponent<TurnOffLight>().lightRef.SetActive(false);
-                roomref.GetComponent<BoxOverLay>().hitColliders[2].GetComponentInChildren<SpriteRenderer>().enabled = true;
-                while (timer * Time.deltaTime < 600 * Time.deltaTime) {
+                    rhinfo.collider.GetComponent<TurnOffLight>().lightRef.SetActive(false);
 
-                    print(timer);
-                    roomref.GetComponent<BoxOverLay>().hitColliders[2].GetComponentInChildren<SpriteRenderer>().enabled = false;
-                    timer++;
+
+                    while (num < roomref.GetComponent<Room>().objects.Length)
+                    {
+                        foreach (GameObject i in roomref.GetComponent<Room>().objects)
+                        {
+                            if (roomref.GetComponent<Room>().objects[num].CompareTag("Human"))
+                            {
+                                roomref.GetComponent<Room>().objects[num].gameObject.GetComponentInChildren<SpriteRenderer>().enabled = true;
+                            }
+
+                        }
+                        num++;
+                    }
                 }
             }
 
-            
         }
 
-
+        
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
@@ -82,7 +95,6 @@ public class PlayerPossesiom : MonoBehaviour
                 camera.transform.rotation = player.transform.rotation;
                 camera.GetComponent<CameraScript>().CameraFollowObj = player.GetComponent<CameraGuideRefernce>().CamGuideRef;
                 isGhost = true;
-
         }
 
     }
