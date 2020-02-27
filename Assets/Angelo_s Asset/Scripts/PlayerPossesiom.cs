@@ -99,6 +99,15 @@ public class PlayerPossesiom : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Room") {
+
+            roomref = other.gameObject;
+
+        }
+    }
+
     void GetRayInfo()
     {
         Ray toCursor = Camera.main.ScreenPointToRay(cursor.transform.position);
@@ -107,4 +116,8 @@ public class PlayerPossesiom : MonoBehaviour
         print(rhinfo.collider.gameObject.tag);
     }
 
+    void timecounter() { 
+    
+    
+    }
 }
