@@ -14,7 +14,6 @@ public class PlayerPossesiom : MonoBehaviour
     RaycastHit rhinfo;
     public bool isGhost = true;
     private bool isClick = false;
-    public float alertTimer = 15;
     public GameObject roomref;
     int num = 0;
  
@@ -24,6 +23,7 @@ public class PlayerPossesiom : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -33,6 +33,8 @@ public class PlayerPossesiom : MonoBehaviour
             {
                 
                 GetRayInfo();
+                
+                
 
                 if (rhinfo.collider.tag == "Human" && rhinfo.collider.GetComponentInChildren<SpriteRenderer>().enabled == true)
                  {
@@ -56,10 +58,11 @@ public class PlayerPossesiom : MonoBehaviour
                 if (rhinfo.collider.tag == "LightSource")
                 {
                     num = 0;
-                    alertTimer = 15;
+                    starttimer();
 
                     rhinfo.collider.GetComponent<TurnOffLight>().lightRef.SetActive(false);
 
+                    
 
                     while (num < roomref.GetComponent<Room>().objects.Length)
                     {
@@ -74,14 +77,21 @@ public class PlayerPossesiom : MonoBehaviour
                         num++;
                     }
                 }
+
+                if (rhinfo.collider.GetComponentInChildren<SpriteRenderer>().enabled == false) {
+
+                        stoptimer();
+                    }
             }
 
         }
-
+        
         
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
+                
+
                 if (rhinfo.collider.tag == "LightSource") {
 
                 rhinfo.collider.GetComponent<TurnOffLight>().lightRef.SetActive(true);
@@ -116,8 +126,15 @@ public class PlayerPossesiom : MonoBehaviour
         print(rhinfo.collider.gameObject.tag);
     }
 
-    void timecounter() { 
-    
-    
+    void starttimer() {
+
+        GetComponent<PossesionTimer>().timer = 5;
+        GetComponent<PossesionTimer>().enabled = true;
+
+    }
+    void stoptimer() {
+
+        GetComponent<PossesionTimer>().enabled = false;
+            
     }
 }
