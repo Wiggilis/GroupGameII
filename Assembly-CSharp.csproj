@@ -72,6 +72,7 @@
     <Compile Include="Assets\Angelo_s Asset\Scripts\PossesionTimer.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\Room.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\RoomNumber.cs" />
+    <Compile Include="Assets\Angelo_s Asset\Scripts\TimeYouCanSpendInsideAHuman.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\TurnOffLight.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\WalktoWall.cs" />
     <Compile Include="Assets\CameraGuideReference.cs" />

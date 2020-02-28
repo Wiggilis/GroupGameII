@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlayerPossesiom : MonoBehaviour
 {
@@ -16,6 +18,7 @@ public class PlayerPossesiom : MonoBehaviour
     private bool isClick = false;
     public GameObject roomref;
     int num = 0;
+    public Text countDownTextRef;
  
 
     
@@ -38,21 +41,13 @@ public class PlayerPossesiom : MonoBehaviour
 
                 if (rhinfo.collider.tag == "Human" && rhinfo.collider.GetComponentInChildren<SpriteRenderer>().enabled == true)
                  {
-                    playerMR.enabled = false;
-                    player.GetComponent<ThirdPersonCharacterControl>().enabled = false;
-                    camera.GetComponent<CameraScript>().CameraFollowObj = rhinfo.collider.GetComponent<CameraGuideRefernce>().CamGuideRef;
-                    camera.transform.rotation = rhinfo.collider.transform.rotation;
-                    isGhost = false;
-
-                    
+                    Possesion();
 
                     if (rhinfo.collider.GetComponent<HumanMovenet>() != null)
                     {
                         rhinfo.collider.GetComponent<HumanMovenet>().enabled = true;
                     }
-                    
-                
-                
+
             }
 
                 if (rhinfo.collider.tag == "LightSource")
@@ -61,8 +56,6 @@ public class PlayerPossesiom : MonoBehaviour
                     starttimer();
 
                     rhinfo.collider.GetComponent<TurnOffLight>().lightRef.SetActive(false);
-
-                    
 
                     while (num < roomref.GetComponent<Room>().objects.Length)
                     {
@@ -97,14 +90,15 @@ public class PlayerPossesiom : MonoBehaviour
                 rhinfo.collider.GetComponent<TurnOffLight>().lightRef.SetActive(true);
 
                 }
-                
-                playerMR.enabled = true;
-                player.GetComponent<ThirdPersonCharacterControl>().enabled = true;
-                rhinfo.collider.GetComponent<HumanMovenet>().enabled = false;
-                player.transform.position = rhinfo.collider.transform.position;
-                camera.transform.rotation = player.transform.rotation;
-                camera.GetComponent<CameraScript>().CameraFollowObj = player.GetComponent<CameraGuideRefernce>().CamGuideRef;
-                isGhost = true;
+
+                ReGhost();
+
+        }
+
+        if (countDownTextRef.GetComponent<TimeYouCanSpendInsideAHuman>().timer <= 0) {
+
+            ReGhost();
+        
         }
 
     }
@@ -136,5 +130,31 @@ public class PlayerPossesiom : MonoBehaviour
 
         GetComponent<PossesionTimer>().enabled = false;
             
+    }
+
+    void Possesion() {
+
+        countDownTextRef.GetComponent<Text>().enabled = true;
+        countDownTextRef.GetComponent<TimeYouCanSpendInsideAHuman>().enabled = true;
+        playerMR.enabled = false;
+        player.GetComponent<ThirdPersonCharacterControl>().enabled = false;
+        camera.GetComponent<CameraScript>().CameraFollowObj = rhinfo.collider.GetComponent<CameraGuideRefernce>().CamGuideRef;
+        camera.transform.rotation = rhinfo.collider.transform.rotation;
+        isGhost = false;
+    }
+
+    void ReGhost() {
+
+        countDownTextRef.GetComponent<Text>().enabled = false;
+        countDownTextRef.GetComponent<TimeYouCanSpendInsideAHuman>().timer = 15;
+        countDownTextRef.GetComponent<TimeYouCanSpendInsideAHuman>().enabled = false;
+        playerMR.enabled = true;
+        player.GetComponent<ThirdPersonCharacterControl>().enabled = true;
+        rhinfo.collider.GetComponent<HumanMovenet>().enabled = false;
+        player.transform.position = rhinfo.collider.transform.position;
+        camera.transform.rotation = player.transform.rotation;
+        camera.GetComponent<CameraScript>().CameraFollowObj = player.GetComponent<CameraGuideRefernce>().CamGuideRef;
+        isGhost = true;
+
     }
 }
