@@ -103,7 +103,7 @@ public class PlayerPossesiom : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Room") {
 
@@ -111,6 +111,7 @@ public class PlayerPossesiom : MonoBehaviour
 
         }
     }
+
 
     void GetRayInfo()
     {

@@ -32,8 +32,4 @@ public class Room : MonoBehaviour
         num++;
     }
 
-    /*void OnCollisionEnter(Collision collision)
-    {
-        print(collision.gameObject.name);    
-    }*/
 }

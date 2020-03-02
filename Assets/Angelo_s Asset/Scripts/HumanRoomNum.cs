@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class HumanRoomNum : MonoBehaviour
 {
-    public int humanRoomNumberRef;
+    public GameObject humanRoomNumberRef;
+    public GameObject Roomref1;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,6 @@ public class HumanRoomNum : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        humanRoomNumberRef = other.gameObject.GetComponent<RoomNumber>().roomNumberRef;
+        humanRoomNumberRef = other.gameObject;
     }
 }

@@ -11,6 +11,7 @@ TagManager:
   - Portal
   - LightSource
   - Room
+  - Enemy
   layers:
   - Default
   - TransparentFX
