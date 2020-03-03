@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerPossesiom : MonoBehaviour
 {
+    public GameObject roomref;
     public MeshRenderer playerMR;
     public GameObject player;
     public GameObject camera;
@@ -16,9 +17,10 @@ public class PlayerPossesiom : MonoBehaviour
     RaycastHit rhinfo;
     public bool isGhost = true;
     private bool isClick = false;
-    public GameObject roomref;
     int num = 0;
+    int num1 = 0;
     public Text countDownTextRef;
+    bool trigExit = true;
  
 
     
@@ -101,6 +103,8 @@ public class PlayerPossesiom : MonoBehaviour
         
         }
 
+        
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -109,10 +113,35 @@ public class PlayerPossesiom : MonoBehaviour
 
             roomref = other.gameObject;
 
+            if (trigExit == false) {
+                roomref.GetComponent<Room>().objects[num1 - 1] = other.gameObject;
+            }
+
+
+            num1 = 0;
+            trigExit = true;
+            print("num1: " + num1);
+            print("TrigExit: " + trigExit);
+
         }
     }
 
+     void OnTriggerExit(Collider other)
+    {
+        while (trigExit) {
+            if (roomref.GetComponent<Room>().objects[num1].gameObject.name == "Player") {
 
+                roomref.GetComponent<Room>().objects[num1] = null;
+
+
+                trigExit = false;
+
+                print("num1: " + num1);
+                print("TrigExit: " + trigExit);
+            }
+            num1++;
+        }
+    }
     void GetRayInfo()
     {
         Ray toCursor = Camera.main.ScreenPointToRay(cursor.transform.position);

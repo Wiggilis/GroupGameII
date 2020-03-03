@@ -31,7 +31,7 @@ public class NavMeshPlayerController : MonoBehaviour
         if (roomtogo[currentindex] == check) {
             
             currentindex = Random.Range(0,6);
-            print(currentindex);
+            //print(currentindex);
 
             check = false;
             
@@ -40,7 +40,7 @@ public class NavMeshPlayerController : MonoBehaviour
         if (count <=10) {
 
             count += Time.deltaTime;
-            print(count);
+            //print(count);
         
         }
         if (count >10 ) {

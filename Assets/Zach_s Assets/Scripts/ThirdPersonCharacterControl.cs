@@ -32,7 +32,7 @@ public class ThirdPersonCharacterControl : MonoBehaviour
 
     void OnCollisionEnter(Collision Collision)
     {
-        print(Collision.collider.name);
+        //print(Collision.collider.name);
         if (Collision.gameObject.tag == "Wall")
         {
             Collision.gameObject.GetComponent<BoxCollider>().enabled = false;
