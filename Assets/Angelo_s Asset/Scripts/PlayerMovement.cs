@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Rigidbody cubeRigidbody;
-    public float forcesPower;
-    private bool Wispress = false;
-    private bool Aispress = false;
-    private bool Sispress = false;
-    private bool Dispress = false;
+ 
     public bool endgame = false;
+    public bool losegame = false;
     public int ghostNumber;
 
     // Start is called before the first frame update
@@ -20,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void FixedUpdate() {
-        if (Wispress == true)
+        /*if (Wispress == true)
         {
             cubeRigidbody.AddForce(Vector3.forward * forcesPower);
             Wispress = false;
@@ -39,12 +35,12 @@ public class PlayerMovement : MonoBehaviour
         {
             cubeRigidbody.AddForce(Vector3.right * forcesPower);
             Dispress = false;
-        }
+        }*/
     }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        /*if (Input.GetKey(KeyCode.W))
         {
             Wispress = true;
         }
@@ -59,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             Dispress = true;
-        }
+        }*/
     }
     private void OnCollisionEnter(Collision collision)
     {
