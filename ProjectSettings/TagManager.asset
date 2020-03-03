@@ -10,6 +10,8 @@ TagManager:
   - GameObject
   - Portal
   - LightSource
+  - Room
+  - Enemy
   layers:
   - Default
   - TransparentFX

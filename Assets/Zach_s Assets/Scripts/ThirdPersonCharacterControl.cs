@@ -20,18 +20,19 @@ public class ThirdPersonCharacterControl : MonoBehaviour
         float translationx = Input.GetAxis("Horizontal") * Speed;
         float translationz = Input.GetAxis("Vertical") * Speed;
         float inputy = Input.GetAxis("RightStickVertical") * Speed;
-        float rotation = Input.GetAxis("Horizontal") * RotationSpeed;
+        float rotation = Input.GetAxis("Mouse X") * RotationSpeed;
+        float mouseY = Input.GetAxis("Mouse Y");
         translationx *= Time.deltaTime;
         translationz *= Time.deltaTime;
         inputy *= Time.deltaTime;
         rotation *= Time.deltaTime;
-        transform.Translate(translationx, inputy, translationz);
+        transform.Translate(translationx, -mouseY, translationz);
         transform.Rotate(0, rotation, 0);
     }
 
     void OnCollisionEnter(Collision Collision)
     {
-        print(Collision.collider.name);
+        //print(Collision.collider.name);
         if (Collision.gameObject.tag == "Wall")
         {
             Collision.gameObject.GetComponent<BoxCollider>().enabled = false;
