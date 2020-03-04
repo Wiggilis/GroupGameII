@@ -7,10 +7,8 @@ using UnityEngine.UI;
 public class PlayerPossesiom : MonoBehaviour
 {
     public GameObject roomref;
-    public MeshRenderer playerMR;
     public GameObject player;
     public GameObject camera;
-    public GameObject walls;
     public GameObject cursor;
     private GameObject people;
     private Transform playerposition;
@@ -21,6 +19,7 @@ public class PlayerPossesiom : MonoBehaviour
     int num1 = 0;
     public Text countDownTextRef;
     bool trigExit = true;
+    public GameObject gameController;
  
 
     
@@ -163,10 +162,10 @@ public class PlayerPossesiom : MonoBehaviour
     }
 
     void Possesion() {
-
+        gameController.GetComponent<GameController>().possesionlimit++;
         countDownTextRef.GetComponent<Text>().enabled = true;
         countDownTextRef.GetComponent<TimeYouCanSpendInsideAHuman>().enabled = true;
-        playerMR.enabled = false;
+        player.GetComponentInChildren<MeshRenderer>().enabled = false;
         player.GetComponent<ThirdPersonCharacterControl>().enabled = false;
         camera.GetComponent<CameraScript>().CameraFollowObj = rhinfo.collider.GetComponent<CameraGuideRefernce>().CamGuideRef;
         camera.transform.rotation = rhinfo.collider.transform.rotation;
@@ -178,7 +177,7 @@ public class PlayerPossesiom : MonoBehaviour
         countDownTextRef.GetComponent<Text>().enabled = false;
         countDownTextRef.GetComponent<TimeYouCanSpendInsideAHuman>().timer = 15;
         countDownTextRef.GetComponent<TimeYouCanSpendInsideAHuman>().enabled = false;
-        playerMR.enabled = true;
+        player.GetComponentInChildren<MeshRenderer>().enabled = true;
         player.GetComponent<ThirdPersonCharacterControl>().enabled = true;
         rhinfo.collider.GetComponent<HumanMovenet>().enabled = false;
         player.transform.position = rhinfo.collider.transform.position;

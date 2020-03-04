@@ -6,14 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject CursorImage;
-    public GameObject humanCandleRef;
+    public bool restartbuttons = false;
     public bool fuctionwascalled = false;
     bool istrue = true;
     bool istrue1 = false;
+
     public int counter = 0;
     int num  = 0;
     int num1 = 0;
+    public int possesionlimit = 0;
+
+    public GameObject CursorImage;
+    public GameObject humanCandleRef;
     public Text candlesFound;
     public GameObject portal;
     public GameObject playerref;
@@ -21,9 +25,11 @@ public class GameController : MonoBehaviour
     public GameObject restartButtonRef;
     public GameObject backgroundref;
     public GameObject countdown;
-    public bool restartbuttons = false;
     public GameObject loseBG;
     public GameObject loseText;
+    public GameObject enemy;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +45,11 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (possesionlimit >= 10) {
+            enemy.GetComponent<MeshRenderer>().enabled = true;
+            enemy.GetComponent<SphereCollider>().enabled = true;
+            enemy.GetComponent<NavMeshPlayerController>().enabled = true;
+        }
         if (counter == 3) {
 
             portal.GetComponent<MeshRenderer>().enabled = true;
@@ -108,6 +119,8 @@ public class GameController : MonoBehaviour
             
             }
         }
+
+        
     }
 
     public void buttonclicked() {
