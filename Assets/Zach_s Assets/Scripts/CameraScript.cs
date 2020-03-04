@@ -20,7 +20,6 @@ public class CameraScript : MonoBehaviour
     public float smoothY;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +38,7 @@ public class CameraScript : MonoBehaviour
         rotationX *= Time.deltaTime;
         rotationY *= Time.deltaTime;
         transform.Rotate(0, rotationX, 0);
+
 
 
     }
