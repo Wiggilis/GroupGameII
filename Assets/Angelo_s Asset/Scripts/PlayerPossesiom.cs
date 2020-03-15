@@ -6,20 +6,27 @@ using UnityEngine.UI;
 
 public class PlayerPossesiom : MonoBehaviour
 {
+    private GameObject people;
+    private Transform playerposition;
+    
     public GameObject roomref;
     public GameObject player;
     public GameObject camera;
     public GameObject cursor;
-    private GameObject people;
-    private Transform playerposition;
-    RaycastHit rhinfo;
-    public bool isGhost = true;
+    public GameObject gameController;
+    public GameObject Human;
+    public Text countDownTextRef;
+
+            bool trigExit = true;
+    public  bool isGhost = true;
     private bool isClick = false;
+
     int num = 0;
     int num1 = 0;
-    public Text countDownTextRef;
-    bool trigExit = true;
-    public GameObject gameController;
+
+    
+    
+      RaycastHit rhinfo;
  
 
     
@@ -35,19 +42,21 @@ public class PlayerPossesiom : MonoBehaviour
 
             if (isClick && isGhost)
             {
-                
+
                 GetRayInfo();
-                
-                
+
+
 
                 if (rhinfo.collider.tag == "Human" && rhinfo.collider.GetComponentInChildren<SpriteRenderer>().enabled == true)
-                 {
+                {
                     Possesion();
 
                     if (rhinfo.collider.GetComponent<HumanMovenet>() != null)
                     {
                         rhinfo.collider.GetComponent<HumanMovenet>().enabled = true;
                     }
+
+                }
 
             }
 
@@ -58,29 +67,28 @@ public class PlayerPossesiom : MonoBehaviour
 
                     rhinfo.collider.GetComponent<TurnOffLight>().lightRef.SetActive(false);
 
-                    while (num < roomref.GetComponent<Room>().objects.Length)
-                    {
-                        foreach (GameObject i in roomref.GetComponent<Room>().objects)
+                        foreach (GameObject i in roomref.GetComponent<Room>().objets1)
                         {
-                            if (roomref.GetComponent<Room>().objects[num].CompareTag("Human"))
+                            print("INSIDE THE FORWACH LOOP");
+
+                            if (roomref.GetComponent<Room>().objets1[num].gameObject.tag == "Human")
                             {
-                                roomref.GetComponent<Room>().objects[num].gameObject.GetComponentInChildren<SpriteRenderer>().enabled = true;
-                            }
+                                print("It Has Found a human");
+                                roomref.GetComponent<Room>().objets1[num].GetComponentInChildren<SpriteRenderer>().enabled = true;
 
+                            }num++;
+                            
                         }
-                        num++;
-                    }
+
                 }
-
-                if (rhinfo.collider.GetComponentInChildren<SpriteRenderer>().enabled == false) {
-
-                        stoptimer();
-                    }
-            }
 
         }
         
-        
+        if (GetComponent<PossesionTimer>().timer < 0) 
+                {
+
+                        stoptimer();
+                }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
@@ -112,34 +120,12 @@ public class PlayerPossesiom : MonoBehaviour
 
             roomref = other.gameObject;
 
-            if (trigExit == false) {
-                roomref.GetComponent<Room>().objects[num1 - 1] = other.gameObject;
-            }
-
-
-            num1 = 0;
-            trigExit = true;
-            print("num1: " + num1);
-            print("TrigExit: " + trigExit);
-
         }
     }
 
      void OnTriggerExit(Collider other)
     {
-        while (trigExit) {
-            if (roomref.GetComponent<Room>().objects[num1].gameObject.name == "Player") {
-
-                roomref.GetComponent<Room>().objects[num1] = null;
-
-
-                trigExit = false;
-
-                print("num1: " + num1);
-                print("TrigExit: " + trigExit);
-            }
-            num1++;
-        }
+        
     }
     void GetRayInfo()
     {

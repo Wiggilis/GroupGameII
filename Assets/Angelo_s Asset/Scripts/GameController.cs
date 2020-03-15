@@ -8,8 +8,10 @@ public class GameController : MonoBehaviour
 {
     public bool restartbuttons = false;
     public bool fuctionwascalled = false;
-    bool istrue = true;
+    bool istrue = false;
     bool istrue1 = false;
+    bool losegame = false;
+    public bool collisionistrue = false;
 
     public int counter = 0;
     int num  = 0;
@@ -38,9 +40,15 @@ public class GameController : MonoBehaviour
         Cursor.visible = false;
     }
 
-    private void Update()
+     void Update()
     {
         CursorImage.transform.position = Input.mousePosition;
+        if (collisionistrue == true)
+        {
+
+            counter++;
+            collisionistrue = false;
+        }
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -49,6 +57,7 @@ public class GameController : MonoBehaviour
             enemy.GetComponent<MeshRenderer>().enabled = true;
             enemy.GetComponent<SphereCollider>().enabled = true;
             enemy.GetComponent<NavMeshPlayerController>().enabled = true;
+            istrue = true;
         }
         if (counter == 3) {
 
@@ -73,7 +82,7 @@ public class GameController : MonoBehaviour
             }
         }
 
-        if (playerref.GetComponent<PlayerMovement>().losegame == true) {
+        if (losegame == true) {
 
             loseBG.GetComponent<Image>().enabled = true;
             loseText.GetComponent<Text>().enabled = true;
@@ -89,38 +98,20 @@ public class GameController : MonoBehaviour
                 SceneManager.LoadScene("Angelo_s Scene");
             }
         }
+            if (Input.GetKeyDown(KeyCode.P)) {
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            counter++;
-        }
+            collisionistrue = true;
 
-        while (istrue) {
-            if (playerref.GetComponent<PlayerPossesiom>().roomref.GetComponent<Room>().objects[num].gameObject.tag == "Player") {
-
-                istrue1 = true;
-
-                while (istrue1) {
-
-                    if (playerref.GetComponent<PlayerPossesiom>().roomref.GetComponent<Room>().objects[num1].gameObject.tag == "Enemy") {
-
-                        playerref.GetComponent<PlayerMovement>().losegame = true;
-                    
-                    }
-
-                    num1++;
-                }
-            
             }
-            num++;
-            if (num > 20) {
-
-                num = 0;
             
-            }
-        }
 
-        
+            if (playerref.GetComponent<PlayerPossesiom>().roomref.GetComponent<Room>().objectsList.Contains(playerref) && 
+                playerref.GetComponent<PlayerPossesiom>().roomref.GetComponent<Room>().objectsList.Contains(enemy)) 
+            {
+
+                        losegame = true;
+
+            }
     }
 
     public void buttonclicked() {

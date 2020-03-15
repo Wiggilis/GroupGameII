@@ -18,21 +18,20 @@ public class PossesionTimer : MonoBehaviour
     {
 
         timer -= Time.deltaTime;
+        num = 0;
 
         if (timer < 0)
         {
-            while (num < GetComponent<PlayerPossesiom>().roomref.GetComponent<Room>().objects.Length)
+            while (num < GetComponent<PlayerPossesiom>().roomref.GetComponent<Room>().objets1.Length)
             {
-                if (GetComponent<PlayerPossesiom>().roomref.GetComponent<Room>().objects[num].CompareTag("Human"))
+                if (GetComponent<PlayerPossesiom>().roomref.GetComponent<Room>().objets1[num].gameObject.tag == "Human")
                 {
-                    GetComponent<PlayerPossesiom>().roomref.GetComponent<Room>().objects[num].gameObject.GetComponentInChildren<SpriteRenderer>().enabled = false;
+                    GetComponent<PlayerPossesiom>().roomref.GetComponent<Room>().objets1[num].gameObject.GetComponentInChildren<SpriteRenderer>().enabled = false;
                 }
                 num++;
             }
         }
 
-        num = 0;
-       
     }
 
 }
