@@ -123,6 +123,11 @@
     <Compile Include="Assets\Zach_s Assets\Scripts\GhostScript.cs" />
     <Compile Include="Assets\Zach_s Assets\Scripts\PlayerFloat.cs" />
     <Compile Include="Assets\Zach_s Assets\Scripts\ThirdPersonCharacterControl.cs" />
+    <Compile Include="Assets\Zach_s Assets\Scripts\TransferPlayer\CameraChange.cs" />
+    <Compile Include="Assets\Zach_s Assets\Scripts\TransferPlayer\CastingToScript.cs" />
+    <Compile Include="Assets\Zach_s Assets\Scripts\TransferPlayer\FirstPersonCamera.cs" />
+    <Compile Include="Assets\Zach_s Assets\Scripts\TransferPlayer\GhostController.cs" />
+    <Compile Include="Assets\Zach_s Assets\Scripts\TransferPlayer\ThirdPersonCamera.cs" />
     <Compile Include="Assets\Zach_s Assets\Scripts\Unused Scripts\[UnUsed]CameraFollow.cs" />
     <Compile Include="Assets\Zach_s Assets\Scripts\Unused Scripts\[UnUsed]Follower.cs" />
     <Compile Include="Assets\Zach_s Assets\Scripts\Unused Scripts\[UnUsed]FollowScript.cs" />
@@ -149,31 +154,31 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/ACER/Desktop/Digtal Game Desgin/GroupGameII/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>V:/z5in6/Documents/GitHub/GroupGameII/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/ACER/Desktop/Digtal Game Desgin/GroupGameII/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>V:/z5in6/Documents/GitHub/GroupGameII/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/ACER/Desktop/Digtal Game Desgin/GroupGameII/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>V:/z5in6/Documents/GitHub/GroupGameII/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/ACER/Desktop/Digtal Game Desgin/GroupGameII/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>V:/z5in6/Documents/GitHub/GroupGameII/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/ACER/Desktop/Digtal Game Desgin/GroupGameII/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>V:/z5in6/Documents/GitHub/GroupGameII/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/ACER/Desktop/Digtal Game Desgin/GroupGameII/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>V:/z5in6/Documents/GitHub/GroupGameII/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/ACER/Desktop/Digtal Game Desgin/GroupGameII/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>V:/z5in6/Documents/GitHub/GroupGameII/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/ACER/Desktop/Digtal Game Desgin/GroupGameII/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>V:/z5in6/Documents/GitHub/GroupGameII/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/ACER/Desktop/Digtal Game Desgin/GroupGameII/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>V:/z5in6/Documents/GitHub/GroupGameII/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.19f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

@@ -6,13 +6,16 @@ using UnityEngine.UI;
 
 public class PlayerPossesiom : MonoBehaviour
 {
+
+    private CameraChange CameraChangeScript;
+    public GameObject CameraController;
     private GameObject people;
     private Transform playerposition;
     
     public GameObject roomref;
     public GameObject HumanRef;
     public GameObject player;
-    public GameObject camera;
+    public GameObject cameraObject;
     public GameObject cursor;
     public GameObject gameController;
     public GameObject Human; 
@@ -28,10 +31,13 @@ public class PlayerPossesiom : MonoBehaviour
     
     
       RaycastHit rhinfo;
- 
 
-    
-   
+    private void Start()
+    {
+        CameraChangeScript = CameraController.GetComponent<CameraChange>(); 
+    }
+
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -60,51 +66,62 @@ public class PlayerPossesiom : MonoBehaviour
 
                 }
 
-            }
+
 
                 if (rhinfo.collider.tag == "LightSource")
                 {
                     num = 0;
                     starttimer();
 
-                    rhinfo.collider.GetComponent<TurnOffLight>().lightRef.SetActive(false);
+                    if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef.activeSelf == true)
+                    {
+                        rhinfo.collider.GetComponent<TurnOffLight>().lightRef.SetActive(false);
+                    }
+                    else if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef.activeSelf == false)
+                    {
+                        rhinfo.collider.GetComponent<TurnOffLight>().lightRef.SetActive(true);
+                    }
 
-                        foreach (GameObject i in roomref.GetComponent<Room>().objets1)
+
+                    foreach (GameObject i in roomref.GetComponent<Room>().objets1)
+                    {
+                        print("INSIDE THE FORWACH LOOP");
+
+                        if (roomref.GetComponent<Room>().objets1[num].gameObject.tag == "Human")
                         {
-                            print("INSIDE THE FORWACH LOOP");
+                            print("It Has Found a human");
+                            roomref.GetComponent<Room>().objets1[num].GetComponentInChildren<SpriteRenderer>().enabled = true;
 
-                            if (roomref.GetComponent<Room>().objets1[num].gameObject.tag == "Human")
-                            {
-                                print("It Has Found a human");
-                                roomref.GetComponent<Room>().objets1[num].GetComponentInChildren<SpriteRenderer>().enabled = true;
-
-                            }num++;
-                            
                         }
 
-                }
+                        num++;
 
+                    }
+
+                }
+            }
         }
         
         if (GetComponent<PossesionTimer>().timer < 0) 
-                {
+        {
 
-                        stoptimer();
-                }
+             stoptimer();
+        }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-                
 
-                if (rhinfo.collider.tag == "LightSource") {
+             if (rhinfo.collider.tag == "LightSource") {
 
-                rhinfo.collider.GetComponent<TurnOffLight>().lightRef.SetActive(true);
+                rhinfo.collider.GetComponent<TurnOffLight>().lightRef.SetActive(false);
 
-                }
-
-                HumanRef.GetComponent<NavMeshHumanController>().enabled = true;
+             }
+             else if(!isGhost)
+             {
+                //HumanRef.GetComponent<NavMeshHumanController>().enabled = true;
 
                 ReGhost();
+             }
 
         }
 
@@ -158,10 +175,13 @@ public class PlayerPossesiom : MonoBehaviour
         countDownTextRef.GetComponent<Text>().enabled = true;
         countDownTextRef.GetComponent<TimeYouCanSpendInsideAHuman>().enabled = true;
         player.GetComponentInChildren<MeshRenderer>().enabled = false;
-        player.GetComponent<ThirdPersonCharacterControl>().enabled = false;
-        camera.GetComponent<CameraScript>().CameraFollowObj = rhinfo.collider.GetComponent<CameraGuideRefernce>().CamGuideRef;
-        camera.transform.rotation = rhinfo.collider.transform.rotation;
+        player.GetComponent<GhostController>().enabled = false;
+        cameraObject.GetComponent<CameraScript>().CameraFollowObj = rhinfo.collider.GetComponent<CameraGuideRefernce>().CamGuideRef;
+        cameraObject.GetComponent<CameraScript>().LookAtObject = rhinfo.collider.GetComponent<CameraGuideRefernce>().LookAtRef;
+        cameraObject.transform.rotation = rhinfo.collider.transform.rotation;
         isGhost = false;
+        CameraChangeScript.CamMode = 1;
+        StartCoroutine(CameraChangeScript.CamChange());
         
     }
 
@@ -172,11 +192,12 @@ public class PlayerPossesiom : MonoBehaviour
         countDownTextRef.GetComponent<TimeYouCanSpendInsideAHuman>().timer = 15;
         countDownTextRef.GetComponent<TimeYouCanSpendInsideAHuman>().enabled = false;
         player.GetComponentInChildren<MeshRenderer>().enabled = true;
-        player.GetComponent<ThirdPersonCharacterControl>().enabled = true;
+        player.GetComponent<GhostController>().enabled = true;
         rhinfo.collider.GetComponent<HumanMovenet>().enabled = false;
         player.transform.position = rhinfo.collider.transform.position;
-        camera.transform.rotation = player.transform.rotation;
-        camera.GetComponent<CameraScript>().CameraFollowObj = player.GetComponent<CameraGuideRefernce>().CamGuideRef;      
+        cameraObject.transform.rotation = player.transform.rotation;
+        cameraObject.GetComponent<CameraScript>().CameraFollowObj = player.GetComponent<CameraGuideRefernce>().CamGuideRef;
+        cameraObject.GetComponent<CameraScript>().LookAtObject = player.GetComponent<CameraGuideRefernce>().LookAtRef;
         isGhost = true;
         
 
