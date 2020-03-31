@@ -21,12 +21,10 @@ public class PlayerPossesiom : MonoBehaviour
     public GameObject Human; 
     public Text countDownTextRef;
 
-            bool trigExit = true;
     public  bool isGhost = true;
     private bool isClick = false;
 
     int num = 0;
-    int num1 = 0;
 
     
     
@@ -182,7 +180,9 @@ public class PlayerPossesiom : MonoBehaviour
         isGhost = false;
         CameraChangeScript.CamMode = 1;
         StartCoroutine(CameraChangeScript.CamChange());
-        
+        CameraChangeScript.RestoreMaterials();
+
+
     }
 
     void ReGhost() {
