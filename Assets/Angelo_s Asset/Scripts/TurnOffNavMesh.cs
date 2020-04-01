@@ -4,19 +4,28 @@ using UnityEngine;
 
 public class TurnOffNavMesh : MonoBehaviour
 {
-    Vector3 startlocation;
+    public GameObject box;
     // Start is called before the first frame update
     void Start()
     {
-        startlocation = new Vector3(-177f, 111f, -92f);
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (startlocation.x >= transform.position.x) {
 
-            GetComponent<NavMeshHumanController>().enabled = false;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Human")
+        {
+
+            collision.gameObject.transform.localPosition = new Vector3(-176.5295f, 110.5212f, -92.44244f);
+            collision.gameObject.GetComponent<NavMeshHumanController>().agent.enabled = false;
+            collision.gameObject.GetComponent<NavMeshHumanController>().enabled = false;
+            box.SetActive(false);
         }
     }
 }

@@ -12,18 +12,19 @@ public class NavMeshHumanController : MonoBehaviour
     int currentindex = 0;
     bool check = true;
     float count = 0;
-
+    public GameObject resetPostionBox;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        resetPostionBox.SetActive(true);
 
         newLocataion = roomtogo[currentindex].transform.position;
         agent.SetDestination(newLocataion);

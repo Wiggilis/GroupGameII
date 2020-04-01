@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
+
 public class PlayerPossesiom : MonoBehaviour
 {
 
@@ -23,6 +24,7 @@ public class PlayerPossesiom : MonoBehaviour
 
     public  bool isGhost = true;
     private bool isClick = false;
+    public bool lightonoff = true;
 
     int num = 0;
 
@@ -37,7 +39,7 @@ public class PlayerPossesiom : MonoBehaviour
 
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         
 
@@ -71,13 +73,14 @@ public class PlayerPossesiom : MonoBehaviour
                     num = 0;
                     starttimer();
 
-                    if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef.activeSelf == true)
+                    if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled == true)
                     {
-                        rhinfo.collider.GetComponent<TurnOffLight>().lightRef.SetActive(false);
+                        rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled = false;
                     }
-                    else if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef.activeSelf == false)
+
+                    else if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled == false)
                     {
-                        rhinfo.collider.GetComponent<TurnOffLight>().lightRef.SetActive(true);
+                        rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled = true;
                     }
 
 
@@ -109,12 +112,16 @@ public class PlayerPossesiom : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
 
-             if (rhinfo.collider.tag == "LightSource") {
+             /* (rhinfo.collider.tag == "LightSource") {
 
-                rhinfo.collider.GetComponent<TurnOffLight>().lightRef.SetActive(false);
+                if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled == false)
+                    {
+                        rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled = true;
+                    }
 
-             }
-             else if(!isGhost)
+            }*/
+
+            if (!isGhost)
              {
                 //HumanRef.GetComponent<NavMeshHumanController>().enabled = true;
 
@@ -187,7 +194,8 @@ public class PlayerPossesiom : MonoBehaviour
 
     void ReGhost() {
 
-        
+        HumanRef.GetComponent<NavMeshHumanController>().enabled = true;
+        HumanRef.GetComponent<NavMeshHumanController>().agent.enabled = true;
         countDownTextRef.GetComponent<Text>().enabled = false;
         countDownTextRef.GetComponent<TimeYouCanSpendInsideAHuman>().timer = 15;
         countDownTextRef.GetComponent<TimeYouCanSpendInsideAHuman>().enabled = false;
