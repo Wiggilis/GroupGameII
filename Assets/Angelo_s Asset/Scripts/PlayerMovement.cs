@@ -16,46 +16,12 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void FixedUpdate() {
-        /*if (Wispress == true)
-        {
-            cubeRigidbody.AddForce(Vector3.forward * forcesPower);
-            Wispress = false;
-        }
-        if (Sispress == true)
-        {
-            cubeRigidbody.AddForce(Vector3.back * forcesPower);
-            Sispress = false;
-        }
-        if (Aispress == true)
-        {
-            cubeRigidbody.AddForce(Vector3.left * forcesPower);
-            Aispress = false;
-        }
-        if (Dispress == true)
-        {
-            cubeRigidbody.AddForce(Vector3.right * forcesPower);
-            Dispress = false;
-        }*/
+
     }
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKey(KeyCode.W))
-        {
-            Wispress = true;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            Sispress = true;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            Aispress = true;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            Dispress = true;
-        }*/
+
     }
     private void OnCollisionEnter(Collision collision)
     {

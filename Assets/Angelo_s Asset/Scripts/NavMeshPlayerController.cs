@@ -30,8 +30,8 @@ public class NavMeshPlayerController : MonoBehaviour
 
         if (roomtogo[currentindex] == check) {
             
-            currentindex = Random.Range(0,6);
-            //print(currentindex);
+            currentindex = Random.Range(0,10);
+            print(currentindex);
 
             check = false;
             

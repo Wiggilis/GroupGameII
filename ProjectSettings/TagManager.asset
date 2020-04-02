@@ -12,6 +12,7 @@ TagManager:
   - LightSource
   - Room
   - Enemy
+  - CameraController
   layers:
   - Default
   - TransparentFX

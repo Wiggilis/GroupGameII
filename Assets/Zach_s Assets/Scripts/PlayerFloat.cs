@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerFloat : MonoBehaviour
 {
 
-    public float amplitude = 0.025f;
-    public float frequency = 1.0f;
+    public float amplitude = 0.01f;
+    public float frequency = 0.5f;
 
     //position storage values
     Vector3 posOffset = new Vector3();

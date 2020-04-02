@@ -21,7 +21,7 @@ public class ThirdPersonCharacterControl : MonoBehaviour
         float translationz = Input.GetAxis("Vertical") * Speed;
         float inputy = Input.GetAxis("RightStickVertical") * Speed;
         float rotation = Input.GetAxis("Mouse X") * RotationSpeed;
-        float mouseY = Input.GetAxis("Mouse Y");
+        float mouseY = Input.GetAxis("RightStickVertical");
         translationx *= Time.deltaTime;
         translationz *= Time.deltaTime;
         inputy *= Time.deltaTime;

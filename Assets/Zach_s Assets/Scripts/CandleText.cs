@@ -14,8 +14,7 @@ public class CandleText : MonoBehaviour
     {
         
         candlesFound.text = "Candles Found: " + ControllerRef.GetComponent<GameController>().counter + "/3";
-   
-       
+ 
     }
 
    
