@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Angelo_s Asset\Scripts\Candlecounters.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\EnemyScript.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\GameController.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\HumanCandleScript.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\Angelo_s Asset\Scripts\TurnOffLight.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\TurnOffNavMesh.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\WalktoWall.cs" />
+    <Compile Include="Assets\Angelo_s Asset\Scripts\WinCon1.cs" />
     <Compile Include="Assets\CameraGuideReference.cs" />
     <Compile Include="Assets\Marshall's Assets\Laterns and candles\scripts\CameraFacing.cs" />
     <Compile Include="Assets\Marshall's Assets\Laterns and candles\scripts\ExtendedFlycam.cs" />

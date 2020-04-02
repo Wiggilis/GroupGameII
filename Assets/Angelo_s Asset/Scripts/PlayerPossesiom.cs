@@ -112,14 +112,6 @@ public class PlayerPossesiom : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
 
-             /* (rhinfo.collider.tag == "LightSource") {
-
-                if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled == false)
-                    {
-                        rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled = true;
-                    }
-
-            }*/
 
             if (!isGhost)
              {
@@ -153,12 +145,12 @@ public class PlayerPossesiom : MonoBehaviour
     {
         
     }
-    void GetRayInfo()
+    public void GetRayInfo()
     {
         Ray toCursor = Camera.main.ScreenPointToRay(cursor.transform.position);
         bool didgit = Physics.Raycast(toCursor, out rhinfo, 500.0f);
 
-        print(rhinfo.collider.gameObject.tag);
+        //print(rhinfo.collider.gameObject.tag);
     }
 
     void starttimer() {
@@ -175,7 +167,7 @@ public class PlayerPossesiom : MonoBehaviour
 
     void Possesion() {
 
-        
+        CameraController.GetComponent<WinCon1>().enabled = true;
         gameController.GetComponent<GameController>().possesionlimit++;
         countDownTextRef.GetComponent<Text>().enabled = true;
         countDownTextRef.GetComponent<TimeYouCanSpendInsideAHuman>().enabled = true;
@@ -194,6 +186,7 @@ public class PlayerPossesiom : MonoBehaviour
 
     void ReGhost() {
 
+        CameraController.GetComponent<WinCon1>().enabled = false;
         HumanRef.GetComponent<NavMeshHumanController>().enabled = true;
         HumanRef.GetComponent<NavMeshHumanController>().agent.enabled = true;
         countDownTextRef.GetComponent<Text>().enabled = false;

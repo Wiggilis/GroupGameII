@@ -10,6 +10,8 @@ public class Room : MonoBehaviour
     public int num1 = 0;
     public GameObject Player;
     public GameObject Enemy;
+    public List<GameObject> human;
+    public GameObject humans;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,14 +32,20 @@ public class Room : MonoBehaviour
         {
 
             objets1[num] = other.gameObject;
-            
-        }num++;
+
+        }
+        num++;
 
         foreach (GameObject i in objectsList)
         {   
             
             objectsList.Add(other.gameObject);
-            
+            if (other.gameObject.tag == "Human")
+            {
+
+                human.Add(other.gameObject);
+                humans = other.gameObject;
+            }
         }
         
     }
@@ -54,7 +62,6 @@ public class Room : MonoBehaviour
                 objectsList.Remove(Player);
 
             }
-            
 
         }
 
@@ -69,6 +76,26 @@ public class Room : MonoBehaviour
             }
 
         }
-    }
+        /*foreach (GameObject iy in human)
+        {
+
+            if (objectsList.Contains(humans))
+            {
+
+                objectsList.Remove(humans);
+                human.Remove(humans);
+            }
+            if (humans != null) {
+
+                foreach (GameObject iz in human) {
+
+                    humans = human[num1];
+                
+                
+                }num1++;
+            }
+            num1 = 0;
+        }*/
+     }
 
 }

@@ -40,33 +40,32 @@ public class GameController : MonoBehaviour
         Cursor.visible = false;
     }
 
-     void Update()
+    // Update is called once per frame
+    void Update()
     {
         CursorImage.transform.position = Input.mousePosition;
-        if (collisionistrue == true)
+        /*if (collisionistrue == true)
         {
 
             counter++;
             collisionistrue = false;
-        }
-    }
-    // Update is called once per frame
-    void FixedUpdate()
-    {
+        }*/
+
         if (possesionlimit >= 10) {
             enemy.GetComponent<MeshRenderer>().enabled = true;
             enemy.GetComponent<SphereCollider>().enabled = true;
             enemy.GetComponent<NavMeshPlayerController>().enabled = true;
             istrue = true;
         }
-        if (counter == 3) {
+        if (counter >= 3) {
 
             portal.GetComponent<MeshRenderer>().enabled = true;
             portal.GetComponent<CapsuleCollider>().enabled = true;
 
 
         }
-        if (playerref.GetComponent<PlayerMovement>().endgame == true) {
+        if (playerref.GetComponent<PlayerMovement>().endgame == true) 
+        {
             backgroundref.GetComponent<Image>().enabled = true;
             restartButtonRef.GetComponent<Image>().enabled = true;
             restartButtonRef.GetComponent<Button>().enabled = true;
@@ -120,6 +119,11 @@ public class GameController : MonoBehaviour
         }
     }
     
-   
+   public void IncreaseCounter()
+    {
+
+        counter+=1;
+
+    }
  
 }

@@ -19,14 +19,14 @@ public class HumanCandleScript : MonoBehaviour
             
     }
 
-    void OnCollisionEnter(Collision collision)
+    /*void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag == "GameObject") {
 
             Destroy(collision.gameObject);
             GameControllerRef.GetComponent<GameController>().collisionistrue = true;
 
-            print(GameControllerRef.GetComponent<GameController>().counter);
+            //print(GameControllerRef.GetComponent<GameController>().counter);
         }   
-    }
+    }*/
 }
