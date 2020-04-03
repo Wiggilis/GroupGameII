@@ -8,14 +8,10 @@ public class GameController : MonoBehaviour
 {
     public bool restartbuttons = false;
     public bool fuctionwascalled = false;
-    bool istrue = false;
-    bool istrue1 = false;
     bool losegame = false;
     public bool collisionistrue = false;
 
     public int counter = 0;
-    int num  = 0;
-    int num1 = 0;
     public int possesionlimit = 0;
 
     public GameObject CursorImage;
@@ -55,7 +51,7 @@ public class GameController : MonoBehaviour
             enemy.GetComponent<MeshRenderer>().enabled = true;
             enemy.GetComponent<SphereCollider>().enabled = true;
             enemy.GetComponent<NavMeshPlayerController>().enabled = true;
-            istrue = true;
+            
         }
         if (counter >= 3) {
 

@@ -74,6 +74,7 @@
     <Compile Include="Assets\Angelo_s Asset\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\PlayerPossesiom.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\PossesionTimer.cs" />
+    <Compile Include="Assets\Angelo_s Asset\Scripts\RitualCandleplacement.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\Room.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\RoomNumber.cs" />
     <Compile Include="Assets\Angelo_s Asset\Scripts\SphereGOTO.cs" />

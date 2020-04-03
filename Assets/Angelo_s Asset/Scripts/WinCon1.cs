@@ -40,11 +40,10 @@ public class WinCon1 : MonoBehaviour
 
         if (rhinfo.collider.tag == "GameObject")
         {
-
-
-            gameController.GetComponent<GameController>().IncreaseCounter();
             Destroy(rhinfo.collider.gameObject);
+            gameController.GetComponent<GameController>().IncreaseCounter();
             player.GetComponent<PlayerPossesiom>().HumanRef.GetComponent<Candlecounters>().candle++;
+            
         }
     }
 }

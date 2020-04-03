@@ -76,7 +76,7 @@ public class Room : MonoBehaviour
             }
 
         }
-        /*foreach (GameObject iy in human)
+        foreach (GameObject iy in human)
         {
 
             if (objectsList.Contains(humans))
@@ -85,17 +85,8 @@ public class Room : MonoBehaviour
                 objectsList.Remove(humans);
                 human.Remove(humans);
             }
-            if (humans != null) {
-
-                foreach (GameObject iz in human) {
-
-                    humans = human[num1];
-                
-                
-                }num1++;
-            }
-            num1 = 0;
-        }*/
+          
+        }
      }
 
 }

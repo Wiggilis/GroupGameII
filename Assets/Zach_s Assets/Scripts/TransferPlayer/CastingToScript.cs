@@ -22,16 +22,16 @@ public class CastingToScript : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Mouse is down");
+            //Debug.Log("Mouse is down");
 
             RaycastHit hitInfo = new RaycastHit();
             bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
             if (hit)
             {
-                Debug.Log("Hit " + hitInfo.transform.gameObject.name);
+                //Debug.Log("Hit " + hitInfo.transform.gameObject.name);
                 if (hitInfo.transform.gameObject.tag == "GameObject")
                 {
-                    Debug.Log("It's working!");
+                    //Debug.Log("It's working!");
                     var selection = hitInfo.transform;
                     var selectionRenderer = selection.GetComponent<Renderer>();
                     if (selectionRenderer != null)
@@ -41,14 +41,14 @@ public class CastingToScript : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("nopz");
+                    //Debug.Log("nopz");
                 }
             }
             else
             {
-                Debug.Log("No hit");
+                //Debug.Log("No hit");
             }
-            Debug.Log("Mouse is down");
+           // Debug.Log("Mouse is down");
         }
 
         if (Input.GetKeyDown(KeyCode.E))

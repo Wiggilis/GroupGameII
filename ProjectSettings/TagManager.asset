@@ -13,6 +13,7 @@ TagManager:
   - Room
   - Enemy
   - CameraController
+  - Angelo
   layers:
   - Default
   - TransparentFX

@@ -23,14 +23,12 @@ public class PlayerPossesiom : MonoBehaviour
     public Text countDownTextRef;
 
     public  bool isGhost = true;
-    private bool isClick = false;
+    public bool isClick = false;
     public bool lightonoff = true;
 
     int num = 0;
 
-    
-    
-      RaycastHit rhinfo;
+    RaycastHit rhinfo;
 
     private void Start()
     {
@@ -200,7 +198,7 @@ public class PlayerPossesiom : MonoBehaviour
         cameraObject.GetComponent<CameraScript>().CameraFollowObj = player.GetComponent<CameraGuideRefernce>().CamGuideRef;
         cameraObject.GetComponent<CameraScript>().LookAtObject = player.GetComponent<CameraGuideRefernce>().LookAtRef;
         isGhost = true;
-        
+        isClick = false;
 
     }
 }

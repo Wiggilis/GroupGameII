@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 978262317}
   - component: {fileID: 978262318}
   - component: {fileID: 4476020733285227671}
+  - component: {fileID: 304497583}
   m_Layer: 10
   m_Name: Human
   m_TagString: Human
@@ -245,6 +246,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5066f7ed039357441bac693bc8022d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  candle: 0
+--- !u!114 &304497583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6054058279789569121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4acf594535da94544a71e2bbfcc5d318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RCandle: {fileID: 0}
+  RCandle1: {fileID: 0}
+  RCandle2: {fileID: 0}
+  RCandle3: {fileID: 0}
+  RCandle4: {fileID: 0}
+  RCandle5: {fileID: 0}
+  RCandle6: {fileID: 0}
+  RCandle7: {fileID: 0}
+  RCandle8: {fileID: 0}
+  RCandle9: {fileID: 0}
+  cursor: {fileID: 0}
 --- !u!1 &6583127537254013637
 GameObject:
   m_ObjectHideFlags: 0
