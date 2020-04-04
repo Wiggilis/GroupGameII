@@ -6,6 +6,7 @@ public class TurnOffLight : MonoBehaviour
 {
 
     public GameObject lightRef;
+    public GameObject lightRef2;
     // Start is called before the first frame update
     void Start()
     {

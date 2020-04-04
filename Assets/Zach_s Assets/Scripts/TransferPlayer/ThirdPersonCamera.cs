@@ -17,10 +17,6 @@ public class ThirdPersonCamera : MonoBehaviour
 
     private void Update()
     {
-        if (Cursor.visible == false)
-        {
-            Cursor.visible = true;
-        }
         rotationX = Input.GetAxis("Horizontal");
         rotationY = Input.GetAxis("Vertical");
         distanceZ = Input.GetAxis("Mouse ScrollWheel");

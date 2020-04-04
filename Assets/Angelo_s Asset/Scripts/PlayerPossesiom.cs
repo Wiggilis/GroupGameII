@@ -17,7 +17,7 @@ public class PlayerPossesiom : MonoBehaviour
     public GameObject HumanRef;
     public GameObject player;
     public GameObject cameraObject;
-    public GameObject cursor;
+    public GameObject CursorImage;
     public GameObject gameController;
     public GameObject Human; 
     public Text countDownTextRef;
@@ -126,7 +126,16 @@ public class PlayerPossesiom : MonoBehaviour
         
         }
 
-        
+        if (Input.GetButton("Ctrl") && !isGhost)
+        {
+            CursorImage.SetActive(true);
+            HumanRef.GetComponent<HumanMovenet>().enabled = false;
+        }
+        else if (!isGhost)
+        {
+            CursorImage.SetActive(false);
+            HumanRef.GetComponent<HumanMovenet>().enabled = true;
+        }
 
     }
 
@@ -145,7 +154,7 @@ public class PlayerPossesiom : MonoBehaviour
     }
     public void GetRayInfo()
     {
-        Ray toCursor = Camera.main.ScreenPointToRay(cursor.transform.position);
+        Ray toCursor = Camera.main.ScreenPointToRay(CursorImage.transform.position);
         bool didgit = Physics.Raycast(toCursor, out rhinfo, 500.0f);
 
         //print(rhinfo.collider.gameObject.tag);
@@ -199,6 +208,6 @@ public class PlayerPossesiom : MonoBehaviour
         cameraObject.GetComponent<CameraScript>().LookAtObject = player.GetComponent<CameraGuideRefernce>().LookAtRef;
         isGhost = true;
         isClick = false;
-
+        CursorImage.SetActive(false);
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraChange : MonoBehaviour
 {
     public GameObject Player;
+    public GameObject Human;
     public GameObject CursorImage;
     public GameObject ThirdPersonCamera;
     public GameObject FirstPersonCamera;

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class WinCon1 : MonoBehaviour
 {
-    public GameObject cursor;
+    public GameObject CursorImage;
     private GameObject gameController;
     private GameObject player;
     public int num;
@@ -31,7 +31,7 @@ public class WinCon1 : MonoBehaviour
 
     void raytocast() {
 
-        Ray toCursor = Camera.main.ScreenPointToRay(cursor.transform.position);
+        Ray toCursor = Camera.main.ScreenPointToRay(CursorImage.transform.position);
         bool didgit = Physics.Raycast(toCursor, out rhinfo, 500.0f);
 
     }

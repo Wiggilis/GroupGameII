@@ -9,7 +9,6 @@ public class GameController : MonoBehaviour
     public bool restartbuttons = false;
     public bool fuctionwascalled = false;
     bool losegame = false;
-    public bool collisionistrue = false;
 
     public int counter = 0;
     public int possesionlimit = 0;
@@ -32,7 +31,6 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
@@ -40,12 +38,11 @@ public class GameController : MonoBehaviour
     void Update()
     {
         CursorImage.transform.position = Input.mousePosition;
-        /*if (collisionistrue == true)
-        {
 
-            counter++;
-            collisionistrue = false;
-        }*/
+        if (Cursor.visible == true)
+        {
+            Cursor.visible = false;
+        }
 
         if (possesionlimit >= 10) {
             enemy.GetComponent<MeshRenderer>().enabled = true;
@@ -93,11 +90,6 @@ public class GameController : MonoBehaviour
                 SceneManager.LoadScene("Angelo_s Scene");
             }
         }
-            if (Input.GetKeyDown(KeyCode.P)) {
-
-            collisionistrue = true;
-
-            }
             
 
             if (playerref.GetComponent<PlayerPossesiom>().roomref.GetComponent<Room>().objectsList.Contains(playerref) && 
