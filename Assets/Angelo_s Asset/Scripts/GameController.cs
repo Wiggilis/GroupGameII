@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     public bool restartbuttons = false;
     public bool fuctionwascalled = false;
     bool losegame = false;
+    public bool tencandle = false;
 
     public int counter = 0;
     public int possesionlimit = 0;
@@ -44,13 +45,13 @@ public class GameController : MonoBehaviour
             Cursor.visible = false;
         }
 
-        if (possesionlimit >= 10) {
+        if (possesionlimit >= 6) {
             enemy.GetComponent<MeshRenderer>().enabled = true;
             enemy.GetComponent<SphereCollider>().enabled = true;
             enemy.GetComponent<NavMeshPlayerController>().enabled = true;
             
         }
-        if (counter >= 10) {
+        if (tencandle == true) {
 
             portal.GetComponent<MeshRenderer>().enabled = true;
             portal.GetComponent<CapsuleCollider>().enabled = true;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RitualCandleplacement : MonoBehaviour
 {
-    int candlenum;
+    int candlenum = 0;
     public GameObject RCandle;
     public GameObject RCandle1;
     public GameObject RCandle2;
@@ -17,6 +17,7 @@ public class RitualCandleplacement : MonoBehaviour
     public GameObject RCandle9;
     private GameObject player;
     public GameObject cursor;
+    public GameObject human;
 
     RaycastHit rhinfo;
 
@@ -42,7 +43,7 @@ public class RitualCandleplacement : MonoBehaviour
     {
         if (player.GetComponent<PlayerPossesiom>().isClick == true) {
 
-            cursor.SetActive(true);
+            
             GetRayInfo();
 
             if (Input.GetKeyDown(KeyCode.Mouse0)) {
@@ -51,11 +52,12 @@ public class RitualCandleplacement : MonoBehaviour
                 if (rhinfo.collider.tag == "Angelo")
                 {
                    
+                    if (player.GetComponent<PlayerPossesiom>().HumanRef.GetComponent<Candlecounters>().candle > 0) {
 
-                    if (GetComponent<Candlecounters>().candle > 0) {
+                        candlenum = candlenum + player.GetComponent<PlayerPossesiom>().HumanRef.GetComponent<Candlecounters>().candle;
+                        
+                        player.GetComponent<PlayerPossesiom>().HumanRef.GetComponent<Candlecounters>().candle = 0;
 
-                        candlenum += GetComponent<Candlecounters>().candle;
-                        GetComponent<Candlecounters>().candle = 0;
                         if (candlenum >= 1) {
 
                             RCandle.SetActive(true);
@@ -122,14 +124,14 @@ public class RitualCandleplacement : MonoBehaviour
                         {
 
                             RCandle9.SetActive(true);
-
+                            player.GetComponent<PlayerPossesiom>().gameController.GetComponent<GameController>().tencandle = true;
                         }
                     }
 
                 }
             }
             
-        }//cursor.SetActive(false);
+        }
     }
     public void GetRayInfo()
     {

@@ -13,7 +13,7 @@ public class CandleText : MonoBehaviour
     void Update()
     {
         
-        candlesFound.text = "Candles Found: " + ControllerRef.GetComponent<GameController>().counter + "/3";
+        candlesFound.text = "Candles Found: " + ControllerRef.GetComponent<GameController>().counter + "/10";
  
     }
 

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TimeYouCanSpendInsideAHuman : MonoBehaviour
 {
-    public float timer = 15;
+    public float timer = 30;
     public Text countDown;
     
     // Start is called before the first frame update
