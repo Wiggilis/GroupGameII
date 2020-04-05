@@ -47,15 +47,15 @@ public class RitualCandleplacement : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Mouse0)) {
 
-                print(rhinfo.collider.gameObject.name);
+                
                 if (rhinfo.collider.tag == "Angelo")
                 {
-                    print("Ritual worked");
+                   
 
                     if (GetComponent<Candlecounters>().candle > 0) {
 
                         candlenum += GetComponent<Candlecounters>().candle;
-
+                        GetComponent<Candlecounters>().candle = 0;
                         if (candlenum >= 1) {
 
                             RCandle.SetActive(true);

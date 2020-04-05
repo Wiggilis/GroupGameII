@@ -50,11 +50,10 @@ public class GameController : MonoBehaviour
             enemy.GetComponent<NavMeshPlayerController>().enabled = true;
             
         }
-        if (counter >= 3) {
+        if (counter >= 10) {
 
             portal.GetComponent<MeshRenderer>().enabled = true;
             portal.GetComponent<CapsuleCollider>().enabled = true;
-
 
         }
         if (playerref.GetComponent<PlayerMovement>().endgame == true) 
