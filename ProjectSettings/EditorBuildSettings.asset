@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Zach_s Assets/Scenes/TitleScene.unity
+    guid: 09a0519b6cf3cff4da75d417d161b40c
+  - enabled: 1
+    path: Assets/Zach_s Assets/Scenes/LoadScene.unity
+    guid: cf5011a0cab2b0a46b90725cbf7a3e51
+  - enabled: 1
     path: Assets/Angelo_s Asset/Scenes/Angelo_s Scene.unity
     guid: 9ba309f2ac66dd9459e7cc94a6699cd1
   m_configObjects: {}
