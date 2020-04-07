@@ -181,6 +181,7 @@ public class PlayerPossesiom : MonoBehaviour
 
         player.GetComponentInChildren<MeshRenderer>().enabled = false;
         player.GetComponent<GhostController>().enabled = false;
+        player.transform.position = new Vector3(0f,0f,0f);
 
         cameraObject.GetComponent<CameraScript>().CameraFollowObj = rhinfo.collider.GetComponent<CameraGuideRefernce>().CamGuideRef;
         cameraObject.GetComponent<CameraScript>().LookAtObject = rhinfo.collider.GetComponent<CameraGuideRefernce>().LookAtRef;
