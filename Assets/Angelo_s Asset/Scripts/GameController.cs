@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour
     public GameObject loseBG;
     public GameObject loseText;
     public GameObject enemy;
-
+    public GameObject Instru;
 
 
     // Start is called before the first frame update
@@ -43,6 +43,18 @@ public class GameController : MonoBehaviour
         if (Cursor.visible == true)
         {
             Cursor.visible = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && Instru.activeSelf == true) {
+
+            Instru.SetActive(false);
+        
+        }
+
+        if (Instru.activeSelf == false) {
+
+            playerref.SetActive(true);
+        
         }
 
         if (possesionlimit >= 6) {
