@@ -81,11 +81,19 @@ public class PlayerPossesiom : MonoBehaviour
                     if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled == true)
                     {
                         rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled = false;
+                        /*if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef2.GetComponent<Light>().enabled == true)
+                        {
+                            rhinfo.collider.GetComponent<TurnOffLight>().lightRef2.GetComponent<Light>().enabled = false;
+                        }*/
                     }
 
                     else if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled == false)
                     {
                         rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled = true;
+                        /*if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef2.GetComponent<Light>().enabled == false)
+                        {
+                            rhinfo.collider.GetComponent<TurnOffLight>().lightRef2.GetComponent<Light>().enabled = true;
+                        }*/
                     }
 
 
@@ -136,11 +144,13 @@ public class PlayerPossesiom : MonoBehaviour
         {
             CursorImage.SetActive(true);
             HumanRef.GetComponent<HumanMovenet>().enabled = false;
+            Cursor.lockState = CursorLockMode.None;
         }
         else if (!isGhost)
         {
             CursorImage.SetActive(false);
             HumanRef.GetComponent<HumanMovenet>().enabled = true;
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
     }
