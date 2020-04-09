@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     public bool fuctionwascalled = false;
     bool losegame = false;
     public bool tencandle = false;
+    bool pausemenu = false;
 
     public int counter = 0;
     public int possesionlimit = 0;
@@ -33,6 +34,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     // Update is called once per frame
@@ -54,7 +56,20 @@ public class GameController : MonoBehaviour
         if (Instru.activeSelf == false) {
 
             playerref.SetActive(true);
-        
+            pausemenu = true;
+        }
+        if (pausemenu == true) {
+            if (Input.GetKey(KeyCode.F)) {
+
+                Instru.SetActive(true);
+
+            }
+            if (!Input.GetKey(KeyCode.F))
+            {
+
+                Instru.SetActive(false);
+
+            }
         }
 
         if (possesionlimit >= 6) {

@@ -21,11 +21,14 @@ public class PlayerPossesiom : MonoBehaviour
     public GameObject gameController;
     public GameObject Human; 
     public Text countDownTextRef;
+    public GameObject TPcam;
 
     public  bool isGhost = true;
     public bool isClick = false;
     public bool lightonoff = true;
 
+    int layerMask = 1 << 9 | 1 <<10;
+    
     int num = 0;
 
     RaycastHit rhinfo;
@@ -39,7 +42,10 @@ public class PlayerPossesiom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 forward = transform.TransformDirection(Vector3.forward) * 500;
+        Debug.DrawRay(CursorImage.transform.position, forward, Color.green);
         
+
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -49,7 +55,7 @@ public class PlayerPossesiom : MonoBehaviour
             {
 
                 GetRayInfo();
-
+                print(rhinfo.collider.gameObject);
 
 
                 if (rhinfo.collider.tag == "Human" && rhinfo.collider.GetComponentInChildren<SpriteRenderer>().enabled == true)
@@ -66,8 +72,7 @@ public class PlayerPossesiom : MonoBehaviour
 
                 }
 
-
-
+                
                 if (rhinfo.collider.tag == "LightSource")
                 {
                     num = 0;
@@ -152,8 +157,13 @@ public class PlayerPossesiom : MonoBehaviour
     public void GetRayInfo()
     {
         Ray toCursor = Camera.main.ScreenPointToRay(CursorImage.transform.position);
-        bool didgit = Physics.Raycast(toCursor, out rhinfo, 500.0f);
+        
+        if (Physics.Raycast(toCursor, out rhinfo, 500.0f, layerMask)) {
 
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 500f, Color.yellow);
+
+        }
+ 
     }
 
     void starttimer() {

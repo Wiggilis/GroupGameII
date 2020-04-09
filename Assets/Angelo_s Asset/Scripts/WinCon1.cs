@@ -21,8 +21,8 @@ public class WinCon1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
-        Debug.DrawRay(CursorImage.transform.position, forward, Color.green);
+        /*Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
+        Debug.DrawRay(CursorImage.transform.position, forward, Color.green);*/
         raytocast();
         
         if (Input.GetKeyDown(KeyCode.Mouse0)) 
