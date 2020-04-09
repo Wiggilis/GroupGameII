@@ -30,25 +30,34 @@ public class CameraChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Camera"))
+        if (Input.GetButton("Camera") && Player.GetComponent<PlayerPossesiom>().isGhost)
         {
-            if (Player.GetComponent<PlayerPossesiom>().isGhost)
-            {
+
                 if (CamMode == 1)
                 {
                     CamMode = 0;
                     //Cursor.visible = false;
                     CreateMaterialArray();
                 }
-                else
+                /*else if(CamMode == 0)
                 {
-                    CamMode += 1;
+                    CamMode = 1;
                     //Cursor.visible = true;
                     RestoreMaterials();
-                }
+                }*/
                 StartCoroutine(CamChange());
-            }
+            
 
+        }
+        else if (Player.GetComponent<PlayerPossesiom>().isGhost)
+        {
+            if (CamMode == 0)
+            {
+                CamMode = 1;
+                //Cursor.visible = true;
+                RestoreMaterials();
+            }
+            StartCoroutine(CamChange());
         }
 
         if (Input.GetKeyDown(KeyCode.P))
@@ -75,19 +84,21 @@ public class CameraChange : MonoBehaviour
         yield return new WaitForSeconds(0.01f);
         if(CamMode == 0)
         {
-            ThirdPersonCamera.SetActive(true);
-            FirstPersonCamera.SetActive(false);
+            //ThirdPersonCamera.SetActive(true);
+            //FirstPersonCamera.SetActive(false);
             Player.GetComponent<GhostController>().enabled = false;
             Player.GetComponent<PlayerPossesiom>().enabled = true;
             CursorImage.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
         }
         if(CamMode == 1)
         {
-            FirstPersonCamera.SetActive(true);
-            ThirdPersonCamera.SetActive(false);
+            //FirstPersonCamera.SetActive(true);
+            //ThirdPersonCamera.SetActive(false);
             Player.GetComponent<GhostController>().enabled = true;
             //Player.GetComponent<PlayerPossesiom>().enabled = false;
             CursorImage.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 

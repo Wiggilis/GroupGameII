@@ -40,7 +40,7 @@ public class WinCon1 : MonoBehaviour
 
     void callthistoadd() {
 
-        if (rhinfo.collider.tag == "GameObject")
+        if (rhinfo.collider.tag == "Candles")
         {
             rhinfo.collider.gameObject.SetActive(false);
             gameController.GetComponent<GameController>().IncreaseCounter();
