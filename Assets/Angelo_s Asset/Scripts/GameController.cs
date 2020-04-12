@@ -119,13 +119,13 @@ public class GameController : MonoBehaviour
         }
             
 
-            if (playerref.GetComponent<PlayerPossesiom>().roomref.GetComponent<Room>().objectsList.Contains(playerref) && 
+           /* if (playerref.GetComponent<PlayerPossesiom>().roomref.GetComponent<Room>().objectsList.Contains(playerref) && 
                 playerref.GetComponent<PlayerPossesiom>().roomref.GetComponent<Room>().objectsList.Contains(enemy)) 
             {
 
                         losegame = true;
 
-            }
+            }*/
     }
 
     public void buttonclicked() {
