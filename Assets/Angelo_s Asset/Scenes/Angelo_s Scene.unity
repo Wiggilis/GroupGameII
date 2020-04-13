@@ -18036,12 +18036,12 @@ PrefabInstance:
     - target: {fileID: 171805424955297372, guid: 953efeff0df519e43876ee2ad4a00799,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.186
+      value: 37.58
       objectReference: {fileID: 0}
     - target: {fileID: 171805424955297372, guid: 953efeff0df519e43876ee2ad4a00799,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 59.189495
+      value: 60.15
       objectReference: {fileID: 0}
     - target: {fileID: 171805424955297372, guid: 953efeff0df519e43876ee2ad4a00799,
         type: 3}
