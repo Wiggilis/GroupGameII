@@ -78,16 +78,22 @@ public class PlayerPossesiom : MonoBehaviour
                     num = 0;
                     starttimer();
 
-                    if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled == true || rhinfo.collider.GetComponent<TurnOffLight>().lightRef2.GetComponent<Light>().enabled == true)
+                    if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled == true)
                     {
                         rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled = false;
-                        rhinfo.collider.GetComponent<TurnOffLight>().lightRef2.GetComponent<Light>().enabled = false;
+                        /*if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef2.GetComponent<Light>().enabled == true)
+                        {
+                            rhinfo.collider.GetComponent<TurnOffLight>().lightRef2.GetComponent<Light>().enabled = false;
+                        }*/
                     }
 
-                    else if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled == false || rhinfo.collider.GetComponent<TurnOffLight>().lightRef2.GetComponent<Light>().enabled == false)
+                    else if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled == false)
                     {
                         rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled = true;
-                        rhinfo.collider.GetComponent<TurnOffLight>().lightRef2.GetComponent<Light>().enabled = true;
+                        /*if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef2.GetComponent<Light>().enabled == false)
+                        {
+                            rhinfo.collider.GetComponent<TurnOffLight>().lightRef2.GetComponent<Light>().enabled = true;
+                        }*/
                     }
 
 
