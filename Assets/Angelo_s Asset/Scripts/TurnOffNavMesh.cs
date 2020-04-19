@@ -22,7 +22,7 @@ public class TurnOffNavMesh : MonoBehaviour
         if (collision.gameObject.tag == "Human")
         {
 
-            collision.gameObject.transform.localPosition = new Vector3(-94.3f, 3.87f, -14.53f);
+            collision.gameObject.transform.localPosition = new Vector3(-176.5295f, 110.5212f, -92.44244f);
             collision.gameObject.GetComponent<NavMeshHumanController>().agent.enabled = false;
             collision.gameObject.GetComponent<NavMeshHumanController>().enabled = false;
             box.SetActive(false);
