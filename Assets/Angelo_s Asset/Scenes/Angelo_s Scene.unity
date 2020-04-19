@@ -169,10 +169,14 @@ Transform:
   - {fileID: 1700324160}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 7
 =======
   m_RootOrder: 6
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+  m_RootOrder: 7
+>>>>>>> parent of e26b3aa... House updates
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &48889702
 PrefabInstance:
@@ -2347,6 +2351,7 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01b4510cec6be90409e4ad6c9798e10e, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!1001 &293218337
 PrefabInstance:
@@ -2418,6 +2423,8 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f86e4cd5574369b4f8d52f553f074223, type: 3}
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+>>>>>>> parent of e26b3aa... House updates
 --- !u!1001 &297820244
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3662,10 +3669,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 4
 =======
   m_RootOrder: 3
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+  m_RootOrder: 4
+>>>>>>> parent of e26b3aa... House updates
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &413825836
 MonoBehaviour:
@@ -3698,6 +3709,7 @@ MonoBehaviour:
   loseText: {fileID: 1587439866}
   enemy: {fileID: 0}
   Instru: {fileID: 1296903430}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 --- !u!1001 &413930998
@@ -3806,6 +3818,8 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab7e43b46e30f5a409fe73d7d545bfa4, type: 3}
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+>>>>>>> parent of e26b3aa... House updates
 --- !u!4 &418035938 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7889199931305890296, guid: 66980430bc7d79a44ba3ec4281c4d652,
@@ -4505,10 +4519,14 @@ Transform:
   - {fileID: 376560039}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 8
 =======
   m_RootOrder: 7
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+  m_RootOrder: 8
+>>>>>>> parent of e26b3aa... House updates
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &463995954
 GameObject:
@@ -4637,6 +4655,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1915374117}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   serializedVersion: 6
@@ -4958,6 +4977,8 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab7e43b46e30f5a409fe73d7d545bfa4, type: 3}
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+>>>>>>> parent of e26b3aa... House updates
 --- !u!1001 &498588117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6195,37 +6216,53 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -94.62
 =======
       value: -23.599998
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+      value: -94.62
+>>>>>>> parent of e26b3aa... House updates
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6c9e70f7fc52f5940b3de660b15d90ba,
         type: 3}
       propertyPath: m_LocalPosition.y
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 5.53
 =======
       value: 7.901211
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+      value: 5.53
+>>>>>>> parent of e26b3aa... House updates
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6c9e70f7fc52f5940b3de660b15d90ba,
         type: 3}
       propertyPath: m_LocalPosition.z
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -13.41
 =======
       value: -15.684147
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+      value: -13.41
+>>>>>>> parent of e26b3aa... House updates
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6c9e70f7fc52f5940b3de660b15d90ba,
         type: 3}
       propertyPath: m_LocalRotation.x
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.5
 =======
       value: -0
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+      value: 0.5
+>>>>>>> parent of e26b3aa... House updates
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6c9e70f7fc52f5940b3de660b15d90ba,
         type: 3}
@@ -6246,10 +6283,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0
 =======
       value: 32
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+      value: 0
+>>>>>>> parent of e26b3aa... House updates
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6c9e70f7fc52f5940b3de660b15d90ba,
         type: 3}
@@ -6267,10 +6308,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of e26b3aa... House updates
     - target: {fileID: -927199367670048503, guid: 6c9e70f7fc52f5940b3de660b15d90ba,
         type: 3}
       propertyPath: m_Name
       value: GDMother
+<<<<<<< HEAD
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 6c9e70f7fc52f5940b3de660b15d90ba,
         type: 3}
@@ -6427,6 +6472,26 @@ MeshFilter:
   m_GameObject: {fileID: 654204230}
   m_Mesh: {fileID: 4300004, guid: 15427fb62be34b141aacac4503ec8e37, type: 3}
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6c9e70f7fc52f5940b3de660b15d90ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6c9e70f7fc52f5940b3de660b15d90ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Human
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101430577481724397, guid: 6c9e70f7fc52f5940b3de660b15d90ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6c9e70f7fc52f5940b3de660b15d90ba, type: 3}
+>>>>>>> parent of e26b3aa... House updates
 --- !u!1001 &686695065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6648,6 +6713,7 @@ Transform:
   m_PrefabInstance: {fileID: 1295068616}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!1001 &733092228
 PrefabInstance:
@@ -6787,6 +6853,8 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef18cf68e5c7efc49b863727df55dff7, type: 3}
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+>>>>>>> parent of e26b3aa... House updates
 --- !u!1 &739144818
 GameObject:
   m_ObjectHideFlags: 0
@@ -8130,6 +8198,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     m_TransformParent: {fileID: 1636988313}
     m_Modifications:
@@ -8201,6 +8270,8 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+>>>>>>> parent of e26b3aa... House updates
     m_TransformParent: {fileID: 1283937132}
     m_Modifications:
     - target: {fileID: 7889199931305890296, guid: 66980430bc7d79a44ba3ec4281c4d652,
@@ -10418,7 +10489,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_AgentTypeID: -1372625422
+=======
+  m_AgentTypeID: 1479372276
+>>>>>>> parent of e26b3aa... House updates
   m_CollectObjects: 0
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 2, z: 0}
@@ -10448,10 +10523,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 3
 =======
   m_RootOrder: 2
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+  m_RootOrder: 3
+>>>>>>> parent of e26b3aa... House updates
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1154501048 stripped
 Transform:
@@ -10577,12 +10656,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -13.190001, y: -30.000002, z: 0}
 =======
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 17.712, y: -30.733002, z: 342.243}
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -13.190001, y: -30.000002, z: 0}
+>>>>>>> parent of e26b3aa... House updates
 --- !u!1001 &1180411736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11480,6 +11564,7 @@ GameObject:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!1001 &1275336787
 PrefabInstance:
@@ -11557,6 +11642,8 @@ GameObject:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+>>>>>>> parent of e26b3aa... House updates
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1279962277}
@@ -11856,6 +11943,7 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1302032872}
   m_CullTransparentMesh: 0
 --- !u!212 &1302032875
@@ -12031,6 +12119,8 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of e26b3aa... House updates
   m_GameObject: {fileID: 1312745262}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -12744,6 +12834,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 --- !u!212 &1407652459
 SpriteRenderer:
+<<<<<<< HEAD
 =======
   m_GameObject: {fileID: 1415413532}
   m_Enabled: 0
@@ -12802,11 +12893,16 @@ SpriteRenderer:
 --- !u!4 &1415413534
 Transform:
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+>>>>>>> parent of e26b3aa... House updates
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of e26b3aa... House updates
   m_GameObject: {fileID: 1407652456}
   m_Enabled: 0
   m_CastShadows: 0
@@ -12850,6 +12946,7 @@ Transform:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 =======
   m_GameObject: {fileID: 1415413532}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
@@ -12860,6 +12957,8 @@ Transform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+>>>>>>> parent of e26b3aa... House updates
 --- !u!1001 &1428534848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13500,10 +13599,14 @@ RectTransform:
   - {fileID: 212291019}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 9
 =======
   m_RootOrder: 8
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+  m_RootOrder: 9
+>>>>>>> parent of e26b3aa... House updates
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -14171,6 +14274,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+<<<<<<< HEAD
       objectReference: {fileID: 0}
     - target: {fileID: 3062698233068850699, guid: 66b38516a8b0830439c7bec36fa9bfb8,
         type: 3}
@@ -14414,6 +14518,247 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7945363720768364037, guid: 4cfdb7553c48dd74c8a5a555770eb55f,
         type: 3}
+=======
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062698233068850699, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: gameController
+      value: 
+      objectReference: {fileID: 413825834}
+    - target: {fileID: 3062698233068850699, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: cursor
+      value: 
+      objectReference: {fileID: 212291018}
+    - target: {fileID: 3062698233068850699, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: countDownTextRef
+      value: 
+      objectReference: {fileID: 1873192483}
+    - target: {fileID: 3062698233068850699, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: cameraObject
+      value: 
+      objectReference: {fileID: 1889906687}
+    - target: {fileID: 3062698233068850699, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: CameraController
+      value: 
+      objectReference: {fileID: 597941871}
+    - target: {fileID: 3062698233068850699, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: CursorImage
+      value: 
+      objectReference: {fileID: 212291018}
+    - target: {fileID: 3062698233068850699, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: TPcam
+      value: 
+      objectReference: {fileID: 1648809017}
+    - target: {fileID: 3062698233068850701, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062698233068850702, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062698233068850742, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458459587200245827, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458459587200245827, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7143854742707978345, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c2e6e9fcebf26564c9e26f5a3a4de3a1, type: 2}
+    - target: {fileID: 8068857470306456144, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -108.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068857470306456144, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068857470306456144, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068857470306456144, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068857470306456144, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068857470306456144, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068857470306456144, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068857470306456144, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068857470306456144, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068857470306456144, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068857470306456144, guid: 66b38516a8b0830439c7bec36fa9bfb8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66b38516a8b0830439c7bec36fa9bfb8, type: 3}
+--- !u!1 &1519524823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1519524824}
+  - component: {fileID: 1519524826}
+  - component: {fileID: 1519524825}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1519524824
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519524823}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1481161625}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1519524825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519524823}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 300
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: Restart Game
+--- !u!222 &1519524826
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519524823}
+  m_CullTransparentMesh: 0
+--- !u!1001 &1527625713
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1684295350}
+    m_Modifications:
+    - target: {fileID: 7945363720768364034, guid: 4cfdb7553c48dd74c8a5a555770eb55f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945363720768364034, guid: 4cfdb7553c48dd74c8a5a555770eb55f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945363720768364034, guid: 4cfdb7553c48dd74c8a5a555770eb55f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945363720768364034, guid: 4cfdb7553c48dd74c8a5a555770eb55f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945363720768364034, guid: 4cfdb7553c48dd74c8a5a555770eb55f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945363720768364034, guid: 4cfdb7553c48dd74c8a5a555770eb55f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945363720768364037, guid: 4cfdb7553c48dd74c8a5a555770eb55f,
+        type: 3}
+>>>>>>> parent of e26b3aa... House updates
       propertyPath: m_BoundingSphereOverride.w
       value: 0
       objectReference: {fileID: 0}
@@ -14928,6 +15273,7 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!1001 &1563478159
 PrefabInstance:
@@ -15011,6 +15357,8 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 275af2b0718fd14458eacd3fc16400a8, type: 3}
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+>>>>>>> parent of e26b3aa... House updates
 --- !u!1 &1571051345 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1683205079487892, guid: 01b4510cec6be90409e4ad6c9798e10e,
@@ -17236,6 +17584,7 @@ Transform:
 <<<<<<< HEAD
   m_Father: {fileID: 0}
   m_RootOrder: 15
+<<<<<<< HEAD
 =======
   - {fileID: 1770185951}
   - {fileID: 1001447745}
@@ -17243,6 +17592,8 @@ Transform:
   m_Father: {fileID: 46159632}
   m_RootOrder: 2
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+>>>>>>> parent of e26b3aa... House updates
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1741665922
 BoxCollider:
@@ -17303,6 +17654,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1741665919}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -17312,10 +17664,15 @@ MonoBehaviour:
   candle: 0
 --- !u!195 &1741665926
 NavMeshAgent:
+=======
+--- !u!1 &1785433432
+GameObject:
+>>>>>>> parent of e26b3aa... House updates
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1741665919}
   m_Enabled: 0
   m_AgentTypeID: -1372625422
@@ -17334,10 +17691,25 @@ NavMeshAgent:
   m_ObstacleAvoidanceType: 4
 --- !u!114 &1741665927
 MonoBehaviour:
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1785433433}
+  m_Layer: 0
+  m_Name: GD_Lightswitch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1785433433
+Transform:
+>>>>>>> parent of e26b3aa... House updates
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1741665919}
   m_Enabled: 0
   m_EditorHideFlags: 0
@@ -17450,6 +17822,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of e26b3aa... House updates
   m_GameObject: {fileID: 1785433432}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -142.18695, y: 105.43288, z: -140.16847}
@@ -17596,10 +17970,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 6
 =======
   m_RootOrder: 5
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+  m_RootOrder: 6
+>>>>>>> parent of e26b3aa... House updates
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
 --- !u!114 &1814388415
 MonoBehaviour:
@@ -18421,10 +18799,14 @@ Transform:
   - {fileID: 597941872}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 10
 =======
   m_RootOrder: 9
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+  m_RootOrder: 10
+>>>>>>> parent of e26b3aa... House updates
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1895155680
 GameObject:
@@ -19143,10 +19525,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 11
 =======
   m_RootOrder: 10
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+  m_RootOrder: 11
+>>>>>>> parent of e26b3aa... House updates
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1935836941 stripped
 GameObject:
@@ -19755,10 +20141,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 13
 =======
   m_RootOrder: 11
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+  m_RootOrder: 13
+>>>>>>> parent of e26b3aa... House updates
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2055160320 stripped
 Transform:
@@ -19802,6 +20192,7 @@ Transform:
   m_Father: {fileID: 625853712}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 --- !u!1 &2109358436
@@ -19967,6 +20358,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+>>>>>>> parent of e26b3aa... House updates
 --- !u!1001 &340787229527700928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20411,10 +20804,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 5
 =======
       value: 4
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+      value: 5
+>>>>>>> parent of e26b3aa... House updates
       objectReference: {fileID: 0}
     - target: {fileID: 6119274012211078584, guid: 953efeff0df519e43876ee2ad4a00799,
         type: 3}
@@ -20588,6 +20985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 953efeff0df519e43876ee2ad4a00799, type: 3}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 --- !u!1001 &756185415124697742
@@ -20769,6 +21167,8 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c240851713f2b8b478f8a2ea8badf611, type: 3}
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+>>>>>>> parent of e26b3aa... House updates
 --- !u!1001 &4248340453667556818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21084,10 +21484,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 12
 =======
       value: 28
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+      value: 12
+>>>>>>> parent of e26b3aa... House updates
       objectReference: {fileID: 0}
     - target: {fileID: 6517265264052116532, guid: ff6a09296476acb40aeab9998dd1e3b8,
         type: 3}
@@ -21187,6 +21591,7 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff6a09296476acb40aeab9998dd1e3b8, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!1001 &6554042236325345587
 PrefabInstance:
@@ -21258,6 +21663,8 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8f90a6edcf1a174fb21f302cd466e1e, type: 3}
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+>>>>>>> parent of e26b3aa... House updates
 --- !u!1001 &6667741575069388967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21772,10 +22179,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 14
 =======
       value: 29
 >>>>>>> parent of be13ac5... Revert "4/18/20"
+=======
+      value: 14
+>>>>>>> parent of e26b3aa... House updates
       objectReference: {fileID: 0}
     - target: {fileID: 3367010083774137120, guid: f9d0577d218011b48b5bbf4f17458b9f,
         type: 3}
