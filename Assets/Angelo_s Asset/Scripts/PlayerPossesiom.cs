@@ -42,8 +42,8 @@ public class PlayerPossesiom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 forward = transform.TransformDirection(Vector3.forward) * 500;
-        Debug.DrawRay(CursorImage.transform.position, forward, Color.green);
+        /*Vector3 forward = transform.TransformDirection(Vector3.forward) * 500;
+        Debug.DrawRay(CursorImage.transform.position, forward, Color.green);*/
         
 
 
@@ -134,7 +134,7 @@ public class PlayerPossesiom : MonoBehaviour
         
         }
 
-        if (Input.GetButton("Ekey") && !isGhost)
+        if (Input.GetButton("Camera") && !isGhost)
         {
             CursorImage.SetActive(true);
             HumanRef.GetComponent<HumanMovenet>().enabled = false;
@@ -165,9 +165,8 @@ public class PlayerPossesiom : MonoBehaviour
         if (Physics.Raycast(toCursor, out rhinfo, 500.0f, layerMask)) {
 
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 500f, Color.yellow);
-
+            
         }
- 
     }
 
     void starttimer() {
@@ -188,7 +187,7 @@ public class PlayerPossesiom : MonoBehaviour
 
         CameraController.GetComponent<WinCon1>().enabled = true;
         
-        gameController.GetComponent<GameController>().possesionlimit++;
+
 
         countDownTextRef.GetComponent<Text>().enabled = true;
         countDownTextRef.GetComponent<TimeYouCanSpendInsideAHuman>().enabled = true;

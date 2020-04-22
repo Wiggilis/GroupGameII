@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 15630ca0d5a882b439bd1f819ea8ef5d,
     type: 2}
   m_UseShadowmask: 1
@@ -167,6 +168,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -263,6 +265,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -600,8 +603,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50656850}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 0.990566, g: 0.77076113, b: 0.40650588, a: 1}
   m_Intensity: 5
   m_Range: 1.3876257
@@ -824,8 +828,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81193759}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 0.990566, g: 0.77076113, b: 0.40650588, a: 1}
   m_Intensity: 5
   m_Range: 1.3876257
@@ -1350,8 +1355,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110106075}
   m_Enabled: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 0
+  m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 3
   m_Range: 6.846923
@@ -2304,8 +2310,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232585736}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 0.990566, g: 0.77076113, b: 0.40650588, a: 1}
   m_Intensity: 5
   m_Range: 1.3876257
@@ -2498,8 +2505,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 238332243}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 0
+  m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 20
@@ -2604,8 +2612,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271733865}
   m_Enabled: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 0
+  m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 3
   m_Range: 6.846923
@@ -3625,6 +3634,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3705,8 +3715,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361316324}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 0
+  m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 3
   m_Range: 17.651754
@@ -4053,6 +4064,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4315,10 +4327,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 46159632}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: cursor
-      value: 
-      objectReference: {fileID: 212291018}
     - target: {fileID: -7815896885015259302, guid: 0b4f7890b52b64e4ab3ca865ea64895b,
         type: 3}
       propertyPath: GameControllerRef
@@ -4510,6 +4518,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4589,7 +4598,6 @@ MonoBehaviour:
   fuctionwascalled: 0
   tencandle: 0
   counter: 0
-  possesionlimit: 0
   CursorImage: {fileID: 212291018}
   humanCandleRef: {fileID: 1517139355955724159, guid: 933b14485d0b7ef448b35891478f6fb0,
     type: 3}
@@ -4600,9 +4608,6 @@ MonoBehaviour:
   restartButtonRef: {fileID: 1481161624}
   backgroundref: {fileID: 1928165354}
   countdown: {fileID: 1982580040}
-  loseBG: {fileID: 606877075}
-  loseText: {fileID: 1587439866}
-  enemy: {fileID: 0}
   Instru: {fileID: 1296903430}
 --- !u!1001 &413930998
 PrefabInstance:
@@ -5356,10 +5361,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 46159632}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: cursor
-      value: 
-      objectReference: {fileID: 212291018}
     - target: {fileID: -7815896885015259302, guid: 0b4f7890b52b64e4ab3ca865ea64895b,
         type: 3}
       propertyPath: GameControllerRef
@@ -5592,6 +5593,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5649,8 +5651,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467410818}
   m_Enabled: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 0
+  m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 3
   m_Range: 6.846923
@@ -6103,6 +6106,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6180,6 +6184,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6688,7 +6693,6 @@ MonoBehaviour:
   Player: {fileID: 625853704}
   Human: {fileID: 0}
   CursorImage: {fileID: 212291018}
-  ThirdPersonCamera: {fileID: 0}
   FirstPersonCamera: {fileID: 1900991079}
   CamMode: 1
   highlightMaterial: {fileID: 2100000, guid: fdade41cef026934d9327799836e812b, type: 2}
@@ -6805,8 +6809,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604215854}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 0.990566, g: 0.77076113, b: 0.40650588, a: 1}
   m_Intensity: 5
   m_Range: 1.3876257
@@ -6929,7 +6934,8 @@ MonoBehaviour:
 
     And Right click to Deposses
 
-    Press E/Q to float Up/dpwn
+    Press
+    E/Q to float Up/dpwn
 
     Press F to open up possesion menu'
 --- !u!222 &604859837
@@ -7020,14 +7026,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1785433433}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: lightRef
-      value: 
-      objectReference: {fileID: 1998855220}
-    - target: {fileID: 0}
-      propertyPath: lightRef
-      value: 
-      objectReference: {fileID: 1998855220}
     - target: {fileID: 62802794685224482, guid: a5a640b79a78a4e43b0e9a76cb2c1817,
         type: 3}
       propertyPath: m_Size.z
@@ -7641,6 +7639,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8165,6 +8164,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8548,14 +8548,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1785433433}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: lightRef
-      value: 
-      objectReference: {fileID: 1998855220}
-    - target: {fileID: 0}
-      propertyPath: lightRef
-      value: 
-      objectReference: {fileID: 1998855220}
     - target: {fileID: 62802794685224482, guid: a5a640b79a78a4e43b0e9a76cb2c1817,
         type: 3}
       propertyPath: m_Size.z
@@ -9085,6 +9077,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9269,6 +9262,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9422,6 +9416,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9502,6 +9497,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10044,6 +10040,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10356,6 +10353,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10433,8 +10431,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922192128}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 0.990566, g: 0.77076113, b: 0.40650588, a: 1}
   m_Intensity: 5
   m_Range: 1.3876257
@@ -10537,6 +10536,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10751,14 +10751,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1785433433}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: lightRef
-      value: 
-      objectReference: {fileID: 1998855220}
-    - target: {fileID: 0}
-      propertyPath: lightRef
-      value: 
-      objectReference: {fileID: 1998855220}
     - target: {fileID: 62802794685224482, guid: a5a640b79a78a4e43b0e9a76cb2c1817,
         type: 3}
       propertyPath: m_Size.z
@@ -11288,6 +11280,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -12080,6 +12073,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -12119,10 +12113,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 46159632}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: cursor
-      value: 
-      objectReference: {fileID: 212291018}
     - target: {fileID: -7815896885015259302, guid: 0b4f7890b52b64e4ab3ca865ea64895b,
         type: 3}
       propertyPath: GameControllerRef
@@ -12382,7 +12372,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 39.00006, y: 715}
+  m_AnchoredPosition: {x: 39.000122, y: 715}
   m_SizeDelta: {x: 577.5, y: 65.3}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1134998624
@@ -12478,8 +12468,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137353269}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 0.990566, g: 0.77076113, b: 0.40650588, a: 1}
   m_Intensity: 5
   m_Range: 1.3876257
@@ -12840,8 +12831,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179660657}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 1
+  m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1.5
   m_Range: 10
@@ -13328,8 +13320,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223473868}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 0.990566, g: 0.77076113, b: 0.40650588, a: 1}
   m_Intensity: 5
   m_Range: 1.3876257
@@ -13762,6 +13755,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13839,6 +13833,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14037,6 +14032,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14547,6 +14543,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14678,6 +14675,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15117,6 +15115,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15224,6 +15223,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15284,8 +15284,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1415413532}
   m_Enabled: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 0
+  m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 3
   m_Range: 6.846923
@@ -15615,6 +15616,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15696,7 +15698,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.999939, y: -10}
+  m_AnchoredPosition: {x: -12.999878, y: -10}
   m_SizeDelta: {x: 22, y: 78.099976}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1443983129
@@ -16643,14 +16645,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3062698233068850699, guid: 66b38516a8b0830439c7bec36fa9bfb8,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3062698233068850699, guid: 66b38516a8b0830439c7bec36fa9bfb8,
         type: 3}
@@ -16725,7 +16723,7 @@ PrefabInstance:
     - target: {fileID: 6458459587200245827, guid: 66b38516a8b0830439c7bec36fa9bfb8,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7143854742707978345, guid: 66b38516a8b0830439c7bec36fa9bfb8,
         type: 3}
@@ -16835,6 +16833,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17472,8 +17471,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545076257}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 0.990566, g: 0.77076113, b: 0.40650588, a: 1}
   m_Intensity: 5
   m_Range: 1.3876257
@@ -17563,8 +17563,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546265436}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 0.990566, g: 0.77076113, b: 0.40650588, a: 1}
   m_Intensity: 5
   m_Range: 1.3
@@ -17769,6 +17770,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -18289,6 +18291,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -19685,6 +19688,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -19759,8 +19763,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714305188}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 0.990566, g: 0.77076113, b: 0.40650588, a: 1}
   m_Intensity: 5
   m_Range: 1.3876257
@@ -19856,6 +19861,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -20061,6 +20067,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -20160,6 +20167,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -20331,6 +20339,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -21145,7 +21154,6 @@ GameObject:
   - component: {fileID: 1889906691}
   - component: {fileID: 1889906688}
   - component: {fileID: 1889906689}
-  - component: {fileID: 1889906690}
   m_Layer: 0
   m_Name: GD_CamaraHolder
   m_TagString: Untagged
@@ -21182,22 +21190,6 @@ MonoBehaviour:
   LookAtObject: {fileID: 2096638649}
   CameraMoveSpeed: 120
   RotationSpeed: 100
---- !u!54 &1889906690
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1889906687}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
 --- !u!4 &1889906691
 Transform:
   m_ObjectHideFlags: 0
@@ -21430,6 +21422,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -22173,6 +22166,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -22514,6 +22508,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -22654,6 +22649,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -22746,6 +22742,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -22846,14 +22843,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1785433433}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: lightRef
-      value: 
-      objectReference: {fileID: 1998855220}
-    - target: {fileID: 0}
-      propertyPath: lightRef
-      value: 
-      objectReference: {fileID: 1998855220}
     - target: {fileID: 62802794685224482, guid: a5a640b79a78a4e43b0e9a76cb2c1817,
         type: 3}
       propertyPath: m_Size.z
@@ -24108,30 +24097,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1785433433}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_Center.x
-      value: -72.99521
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Center.y
-      value: 2.4625883
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Center.z
-      value: -8.795787
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Size.x
-      value: 12.730469
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Size.z
-      value: 5.094679
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Size.y
-      value: 6.6202927
-      objectReference: {fileID: 0}
     - target: {fileID: 3750470810179206577, guid: b55d7babc90057243a2548709c4b753a,
         type: 3}
       propertyPath: m_Name

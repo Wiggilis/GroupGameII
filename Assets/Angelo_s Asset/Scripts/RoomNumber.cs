@@ -6,15 +6,5 @@ public class RoomNumber : MonoBehaviour
 {
 
     public int roomNumberRef;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

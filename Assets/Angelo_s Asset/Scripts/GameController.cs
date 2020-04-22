@@ -8,12 +8,10 @@ public class GameController : MonoBehaviour
 {
     public bool restartbuttons = false;
     public bool fuctionwascalled = false;
-    bool losegame = false;
     public bool tencandle = false;
     bool pausemenu = false;
 
     public int counter = 0;
-    public int possesionlimit = 0;
 
     public GameObject CursorImage;
     public GameObject humanCandleRef;
@@ -24,9 +22,6 @@ public class GameController : MonoBehaviour
     public GameObject restartButtonRef;
     public GameObject backgroundref;
     public GameObject countdown;
-    public GameObject loseBG;
-    public GameObject loseText;
-    public GameObject enemy;
     public GameObject Instru;
 
 
@@ -34,7 +29,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
+        //Cursor.lockState = CursorLockMode.Confined;
     }
 
     // Update is called once per frame
@@ -71,12 +66,6 @@ public class GameController : MonoBehaviour
             }
         }
 
-        if (possesionlimit >= 6) {
-            enemy.GetComponent<MeshRenderer>().enabled = true;
-            enemy.GetComponent<SphereCollider>().enabled = true;
-            enemy.GetComponent<NavMeshPlayerController>().enabled = true;
-            
-        }
         if (tencandle == true) {
 
             portal.GetComponent<MeshRenderer>().enabled = true;
@@ -99,23 +88,7 @@ public class GameController : MonoBehaviour
                 SceneManager.LoadScene("Angelo_s Scene");
             }
         }
-
-        if (losegame == true) {
-
-            loseBG.GetComponent<Image>().enabled = true;
-            loseText.GetComponent<Text>().enabled = true;
-            restartButtonRef.GetComponent<Image>().enabled = true;
-            restartButtonRef.GetComponent<Button>().enabled = true;
-            restartButtonRef.GetComponentInChildren<Text>().enabled = true;
-            
-            buttonclicked();
-
-            if (restartbuttons == true)
-            {
-                SceneManager.LoadScene("Angelo_s Scene");
-            }
-        }
-            
+        
     }
 
     public void buttonclicked() {

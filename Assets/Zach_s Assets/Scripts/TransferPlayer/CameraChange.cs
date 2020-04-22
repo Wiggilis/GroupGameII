@@ -7,7 +7,7 @@ public class CameraChange : MonoBehaviour
     public GameObject Player;
     public GameObject Human;
     public GameObject CursorImage;
-    public GameObject ThirdPersonCamera;
+   // public GameObject ThirdPersonCamera;
     public GameObject FirstPersonCamera;
     private PlayerPossesiom isGhost;
     static bool isPaused = false;
@@ -66,16 +66,16 @@ public class CameraChange : MonoBehaviour
             {
                 isPaused = true;
                 Cursor.visible = true;
-                Time.timeScale = 0;
-                ThirdPersonCamera.GetComponent<ThirdPersonCamera>().enabled = false;
+                Time.timeScale = 0f;
+                //ThirdPersonCamera.GetComponent<ThirdPersonCamera>().enabled = false;
                 FirstPersonCamera.GetComponent<FirstPersonCamera>().enabled = false;
             }
             else
             {
                 isPaused = false;
                 Cursor.visible = false;
-                Time.timeScale = 1;
-                ThirdPersonCamera.GetComponent<ThirdPersonCamera>().enabled = true;
+                Time.timeScale = 1f;
+                //ThirdPersonCamera.GetComponent<ThirdPersonCamera>().enabled = true;
                 FirstPersonCamera.GetComponent<FirstPersonCamera>().enabled = true;
             }
         }
@@ -89,7 +89,7 @@ public class CameraChange : MonoBehaviour
             //ThirdPersonCamera.SetActive(true);
             //FirstPersonCamera.SetActive(false);
             Player.GetComponent<GhostController>().enabled = false;
-            Player.GetComponent<PlayerPossesiom>().enabled = true;
+            //Player.GetComponent<PlayerPossesiom>().enabled = true;
             CursorImage.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
         }
