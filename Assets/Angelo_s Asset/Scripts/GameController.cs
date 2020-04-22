@@ -50,7 +50,6 @@ public class GameController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && Instru.activeSelf == true) {
 
             Instru.SetActive(false);
-        
         }
 
         if (Instru.activeSelf == false) {
@@ -95,8 +94,8 @@ public class GameController : MonoBehaviour
 
             buttonclicked();
 
-            if (restartbuttons == true) {
-
+            if (restartbuttons == true) 
+            {
                 SceneManager.LoadScene("Angelo_s Scene");
             }
         }
@@ -113,19 +112,10 @@ public class GameController : MonoBehaviour
 
             if (restartbuttons == true)
             {
-
                 SceneManager.LoadScene("Angelo_s Scene");
             }
         }
             
-
-           /* if (playerref.GetComponent<PlayerPossesiom>().roomref.GetComponent<Room>().objectsList.Contains(playerref) && 
-                playerref.GetComponent<PlayerPossesiom>().roomref.GetComponent<Room>().objectsList.Contains(enemy)) 
-            {
-
-                        losegame = true;
-
-            }*/
     }
 
     public void buttonclicked() {
@@ -136,9 +126,7 @@ public class GameController : MonoBehaviour
     
    public void IncreaseCounter()
     {
-
         counter+=1;
-
     }
  
 }

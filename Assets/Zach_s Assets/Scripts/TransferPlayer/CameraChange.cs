@@ -10,7 +10,7 @@ public class CameraChange : MonoBehaviour
     public GameObject ThirdPersonCamera;
     public GameObject FirstPersonCamera;
     private PlayerPossesiom isGhost;
-    private bool isPaused = false;
+    static bool isPaused = false;
     public int CamMode;
 
     [SerializeField] private Material highlightMaterial;
@@ -66,6 +66,7 @@ public class CameraChange : MonoBehaviour
             {
                 isPaused = true;
                 Cursor.visible = true;
+                Time.timeScale = 0;
                 ThirdPersonCamera.GetComponent<ThirdPersonCamera>().enabled = false;
                 FirstPersonCamera.GetComponent<FirstPersonCamera>().enabled = false;
             }
@@ -73,6 +74,7 @@ public class CameraChange : MonoBehaviour
             {
                 isPaused = false;
                 Cursor.visible = false;
+                Time.timeScale = 1;
                 ThirdPersonCamera.GetComponent<ThirdPersonCamera>().enabled = true;
                 FirstPersonCamera.GetComponent<FirstPersonCamera>().enabled = true;
             }

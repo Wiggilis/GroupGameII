@@ -134,7 +134,7 @@ public class PlayerPossesiom : MonoBehaviour
         
         }
 
-        if (Input.GetButton("Ctrl") && !isGhost)
+        if (Input.GetButton("Ekey") && !isGhost)
         {
             CursorImage.SetActive(true);
             HumanRef.GetComponent<HumanMovenet>().enabled = false;

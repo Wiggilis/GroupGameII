@@ -10,11 +10,6 @@ public class ThirdPersonCamera : MonoBehaviour
     public float turnSpeed = 4.0f;
     public Transform player;
 
-    void Start()
-    {
-        
-    }
-
     private void Update()
     {
         rotationX = Input.GetAxis("Horizontal");
