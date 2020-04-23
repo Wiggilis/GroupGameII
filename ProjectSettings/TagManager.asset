@@ -15,6 +15,8 @@ TagManager:
   - CameraController
   - Angelo
   - Candles
+  - LightSwitch
+  - OtherL
   layers:
   - Default
   - TransparentFX

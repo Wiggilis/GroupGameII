@@ -106,6 +106,40 @@ public class PlayerPossesiom : MonoBehaviour
                     }
 
                 }
+
+                if (rhinfo.collider.tag == "LightSwitch")
+                {
+                    num = 0;
+                    starttimer();
+
+                    if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled == true || rhinfo.collider.GetComponent<TurnOffLight>().lightRef2.GetComponent<Light>().enabled == true)
+                    {
+                        rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled = false;
+                        rhinfo.collider.GetComponent<TurnOffLight>().lightRef2.GetComponent<Light>().enabled = false;
+                    }
+
+                    else if (rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled == false || rhinfo.collider.GetComponent<TurnOffLight>().lightRef2.GetComponent<Light>().enabled == false)
+                    {
+                        rhinfo.collider.GetComponent<TurnOffLight>().lightRef.GetComponent<Light>().enabled = true;
+                        rhinfo.collider.GetComponent<TurnOffLight>().lightRef2.GetComponent<Light>().enabled = true;
+                    }
+
+
+                    foreach (GameObject i in roomref.GetComponent<Room>().objets1)
+                    {
+
+                        if (roomref.GetComponent<Room>().objets1[num].gameObject.tag == "Human")
+                        {
+
+                            roomref.GetComponent<Room>().objets1[num].GetComponentInChildren<SpriteRenderer>().enabled = true;
+
+                        }
+
+                        num++;
+
+                    }
+
+                }
             }
         }
         
