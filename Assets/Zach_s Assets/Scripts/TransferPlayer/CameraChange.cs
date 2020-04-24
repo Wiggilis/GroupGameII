@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraChange : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class CameraChange : MonoBehaviour
     private int i = 0;
     public Material[] MaterialsArray;
     public GameObject[] interactables;
-    public GameObject[] Humans;
+    public GameObject[] HumanMat;
     public GameObject[] LightSource;
     public GameObject[] OtherL;
 
@@ -26,10 +27,10 @@ public class CameraChange : MonoBehaviour
     private void Start()
     {
         interactables = GameObject.FindGameObjectsWithTag("Candles");
-        Humans = GameObject.FindGameObjectsWithTag("Human");
+        HumanMat = GameObject.FindGameObjectsWithTag("HumanMat");
         LightSource = GameObject.FindGameObjectsWithTag("LightSource");
         OtherL = GameObject.FindGameObjectsWithTag("OtherL");
-        MaterialsArray = new Material[interactables.Length + Humans.Length + LightSource.Length + OtherL.Length];
+        MaterialsArray = new Material[interactables.Length + HumanMat.Length + LightSource.Length + OtherL.Length];
     }
 
     // Update is called once per frame
@@ -69,27 +70,47 @@ public class CameraChange : MonoBehaviour
         {
             if (isPaused == false)
             {
-                isPaused = true;
-                Cursor.visible = true;
+                pauseMenu.SetActive(true);
                 Time.timeScale = 0f;
+                isPaused = true;
                 CamHolder.GetComponent<CameraScript>().enabled = false;
                 Player.GetComponent<PlayerFloat>().enabled = false;
-                //ThirdPersonCamera.GetComponent<ThirdPersonCamera>().enabled = false;
                 FirstPersonCamera.GetComponent<FirstPersonCamera>().enabled = false;
-                pauseMenu.SetActive(true);
+
+                //ThirdPersonCamera.GetComponent<ThirdPersonCamera>().enabled = false;
             }
             else
             {
-                isPaused = false;
-                Cursor.visible = false;
-                Time.timeScale = 1f;
-                CamHolder.GetComponent<CameraScript>().enabled = true;
-                Player.GetComponent<PlayerFloat>().enabled = true;
-                //ThirdPersonCamera.GetComponent<ThirdPersonCamera>().enabled = true;
-                FirstPersonCamera.GetComponent<FirstPersonCamera>().enabled = true;
-                pauseMenu.SetActive(false);
+                Unpause();
             }
         }
+
+        if (isPaused) {
+
+
+            if (Input.GetKeyDown(KeyCode.O)) {
+
+                Time.timeScale = 1f;
+                SceneManager.LoadScene(2);
+            }
+
+            if (Input.GetKeyDown(KeyCode.I)) {
+
+                Application.Quit();
+            }
+        }
+    }
+
+    public void Unpause() {
+
+        isPaused = false;
+        Time.timeScale = 1f;
+        CamHolder.GetComponent<CameraScript>().enabled = true;
+        Player.GetComponent<PlayerFloat>().enabled = true;
+        //ThirdPersonCamera.GetComponent<ThirdPersonCamera>().enabled = true;
+        FirstPersonCamera.GetComponent<FirstPersonCamera>().enabled = true;
+        pauseMenu.SetActive(false);
+
     }
 
     public IEnumerator CamChange()
@@ -110,7 +131,7 @@ public class CameraChange : MonoBehaviour
             //ThirdPersonCamera.SetActive(false);
             Player.GetComponent<GhostController>().enabled = true;
             //Player.GetComponent<PlayerPossesiom>().enabled = false;
-            CursorImage.SetActive(false);
+            //CursorImage.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
         }
     }
@@ -126,7 +147,7 @@ public class CameraChange : MonoBehaviour
             ObjectFound.GetComponent<Renderer>().material = highlightMaterial;
         }
 
-        foreach (GameObject ObjectFound in GameObject.FindGameObjectsWithTag("Human"))
+        foreach (GameObject ObjectFound in GameObject.FindGameObjectsWithTag("HumanMat"))
         {
             //Do something to ObjectFound, like this:
             MaterialsArray[i] = ObjectFound.GetComponent<Renderer>().material;
@@ -162,7 +183,7 @@ public class CameraChange : MonoBehaviour
             i++;
         }
 
-        foreach (GameObject ObjectFound in GameObject.FindGameObjectsWithTag("Human"))
+        foreach (GameObject ObjectFound in GameObject.FindGameObjectsWithTag("HumanMat"))
         {
             //Do something to ObjectFound, like this:
             ObjectFound.GetComponent<Renderer>().material = MaterialsArray[i];

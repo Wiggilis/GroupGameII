@@ -37,10 +37,10 @@ public class GameController : MonoBehaviour
     {
         CursorImage.transform.position = Input.mousePosition;
 
-        if (Cursor.visible == true)
+        /*if (Cursor.visible == true)
         {
-            Cursor.visible = false;
-        }
+            //Cursor.visible = false;
+        }*/
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && Instru.activeSelf == true) {
 
@@ -92,6 +92,7 @@ public class GameController : MonoBehaviour
     }
 
     public void buttonclicked() {
+
         if (Input.GetKey(KeyCode.Mouse0)) {
             restartbuttons = true;
         }

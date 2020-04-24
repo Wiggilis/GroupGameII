@@ -17,6 +17,7 @@ TagManager:
   - Candles
   - LightSwitch
   - OtherL
+  - HumanMat
   layers:
   - Default
   - TransparentFX

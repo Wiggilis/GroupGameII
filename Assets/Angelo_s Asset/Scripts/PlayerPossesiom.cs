@@ -28,7 +28,7 @@ public class PlayerPossesiom : MonoBehaviour
     public bool lightonoff = true;
     private GameObject cameraChange;
 
-    int layerMask = 1 << 9 | 1 <<10;
+    int layerMask = 1 << 9 | 1 << 10;
     
     int num = 0;
 
@@ -46,8 +46,8 @@ public class PlayerPossesiom : MonoBehaviour
     {
         /*Vector3 forward = transform.TransformDirection(Vector3.forward) * 500;
         Debug.DrawRay(CursorImage.transform.position, forward, Color.green);*/
-        
 
+       
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
