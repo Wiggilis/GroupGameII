@@ -26,6 +26,7 @@ public class PlayerPossesiom : MonoBehaviour
     public  bool isGhost = true;
     public bool isClick = false;
     public bool lightonoff = true;
+    private GameObject cameraChange;
 
     int layerMask = 1 << 9 | 1 <<10;
     
@@ -35,7 +36,8 @@ public class PlayerPossesiom : MonoBehaviour
 
     private void Start()
     {
-        CameraChangeScript = CameraController.GetComponent<CameraChange>(); 
+        CameraChangeScript = CameraController.GetComponent<CameraChange>();
+        cameraChange = GameObject.FindGameObjectWithTag("CameraController");
     }
 
 
@@ -96,7 +98,7 @@ public class PlayerPossesiom : MonoBehaviour
 
                         if (roomref.GetComponent<Room>().objets1[num].gameObject.tag == "Human")
                         {
-                            
+
                             roomref.GetComponent<Room>().objets1[num].GetComponentInChildren<SpriteRenderer>().enabled = true;
 
                         }

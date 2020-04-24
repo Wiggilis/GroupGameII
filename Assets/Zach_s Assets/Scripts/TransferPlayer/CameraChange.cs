@@ -12,6 +12,7 @@ public class CameraChange : MonoBehaviour
     private PlayerPossesiom isGhost;
     static bool isPaused = false;
     public int CamMode;
+    public GameObject pauseMenu;
 
     [SerializeField] private Material highlightMaterial;
     private int i = 0;
@@ -75,6 +76,7 @@ public class CameraChange : MonoBehaviour
                 Player.GetComponent<PlayerFloat>().enabled = false;
                 //ThirdPersonCamera.GetComponent<ThirdPersonCamera>().enabled = false;
                 FirstPersonCamera.GetComponent<FirstPersonCamera>().enabled = false;
+                pauseMenu.SetActive(true);
             }
             else
             {
@@ -85,6 +87,7 @@ public class CameraChange : MonoBehaviour
                 Player.GetComponent<PlayerFloat>().enabled = true;
                 //ThirdPersonCamera.GetComponent<ThirdPersonCamera>().enabled = true;
                 FirstPersonCamera.GetComponent<FirstPersonCamera>().enabled = true;
+                pauseMenu.SetActive(false);
             }
         }
     }
