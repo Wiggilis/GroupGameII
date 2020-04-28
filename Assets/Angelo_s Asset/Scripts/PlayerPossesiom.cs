@@ -224,11 +224,10 @@ public class PlayerPossesiom : MonoBehaviour
         CameraController.GetComponent<WinCon1>().enabled = true;
         
 
-
         countDownTextRef.GetComponent<Text>().enabled = true;
         countDownTextRef.GetComponent<TimeYouCanSpendInsideAHuman>().enabled = true;
 
-        player.GetComponentInChildren<MeshRenderer>().enabled = false;
+ 
         player.GetComponent<GhostController>().enabled = false;
         player.transform.position = new Vector3(0f,0f,0f);
 
@@ -241,8 +240,8 @@ public class PlayerPossesiom : MonoBehaviour
 
         StartCoroutine(CameraChangeScript.CamChange());
 
-        HumanRef.GetComponent<NavMeshHumanController>().enabled = false;
-        HumanRef.GetComponent<NavMeshHumanController>().agent.enabled = false;
+        /*HumanRef.GetComponent<NavMeshHumanController>().enabled = false;
+        HumanRef.GetComponent<NavMeshHumanController>().agent.enabled = false;*/
 
     }
 
@@ -251,10 +250,10 @@ public class PlayerPossesiom : MonoBehaviour
         isGhost = true;
         isClick = false;
 
-        HumanRef.GetComponent<NavMeshHumanController>().enabled = true;
-        HumanRef.GetComponent<NavMeshHumanController>().agent.enabled = true;
+        /*HumanRef.GetComponent<NavMeshHumanController>().enabled = true;
+        HumanRef.GetComponent<NavMeshHumanController>().agent.enabled = true;*/
 
-        player.GetComponentInChildren<MeshRenderer>().enabled = true;
+        
         player.GetComponent<GhostController>().enabled = true; 
         player.transform.position = rhinfo.collider.transform.position;
 
