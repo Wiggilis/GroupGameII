@@ -18,8 +18,6 @@ public class GameController : MonoBehaviour
     public Text candlesFound;
     public GameObject portal;
     public GameObject playerref;
-    public GameObject youWinRef;
-    public GameObject restartButtonRef;
     public GameObject backgroundref;
     public GameObject countdown;
     public GameObject Instru;
@@ -75,27 +73,15 @@ public class GameController : MonoBehaviour
         if (playerref.GetComponent<PlayerMovement>().endgame == true) 
         {
             backgroundref.GetComponent<Image>().enabled = true;
-            restartButtonRef.GetComponent<Image>().enabled = true;
-            restartButtonRef.GetComponent<Button>().enabled = true;
-            restartButtonRef.GetComponentInChildren<Text>().enabled = true;
-            youWinRef.GetComponent<Text>().enabled = true;
             countdown.GetComponent<Text>().enabled = false;
 
-            buttonclicked();
 
-            if (restartbuttons == true) 
+            if (Input.GetKeyDown(KeyCode.Return)) 
             {
                 SceneManager.LoadScene("Angelo_s Scene");
             }
         }
         
-    }
-
-    public void buttonclicked() {
-
-        if (Input.GetKey(KeyCode.Mouse0)) {
-            restartbuttons = true;
-        }
     }
     
    public void IncreaseCounter()
