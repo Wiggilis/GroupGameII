@@ -253,6 +253,7 @@ public class PlayerPossesiom : MonoBehaviour
         /*HumanRef.GetComponent<NavMeshHumanController>().enabled = true;
         HumanRef.GetComponent<NavMeshHumanController>().agent.enabled = true;*/
 
+        HumanRef.GetComponent<Walkanimation>().Ghost = false;
         
         player.GetComponent<GhostController>().enabled = true; 
         player.transform.position = rhinfo.collider.transform.position;

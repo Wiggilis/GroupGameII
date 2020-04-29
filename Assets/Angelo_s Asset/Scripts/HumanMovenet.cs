@@ -12,9 +12,13 @@ public class HumanMovenet : MonoBehaviour
     public float movementSpeed = 10;
     public float turningSpeed = 60;
 
+
     void Update()
     {      
         HumanMovement();
+        if (Input.GetKey(KeyCode.W)) {
+            GetComponent<Walkanimation>().Ghost = true;
+        }
     }
 
     void HumanMovement()
@@ -32,4 +36,6 @@ public class HumanMovenet : MonoBehaviour
         float mouseY = Input.GetAxis("RightStickVertical") * movementSpeed * Time.deltaTime;
         transform.Translate(0, -mouseY, 0);
     }
+
+
 }
