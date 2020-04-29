@@ -74,7 +74,8 @@ public class PlayerPossesiom : MonoBehaviour
 
                 }
 
-                
+
+
                 if (rhinfo.collider.tag == "LightSource")
                 {
                     num = 0;
