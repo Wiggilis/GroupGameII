@@ -66,13 +66,13 @@ public class GameController : MonoBehaviour
 
         if (tencandle == true) {
 
-            portal.GetComponent<MeshRenderer>().enabled = true;
-            portal.GetComponent<CapsuleCollider>().enabled = true;
+            portal.SetActive(true);
+            
 
         }
         if (playerref.GetComponent<PlayerMovement>().endgame == true) 
         {
-            backgroundref.GetComponent<Image>().enabled = true;
+            backgroundref.SetActive(true);
             countdown.GetComponent<Text>().enabled = false;
 
 

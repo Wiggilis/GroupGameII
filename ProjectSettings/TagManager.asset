@@ -18,6 +18,7 @@ TagManager:
   - LightSwitch
   - OtherL
   - HumanMat
+  - TV
   layers:
   - Default
   - TransparentFX

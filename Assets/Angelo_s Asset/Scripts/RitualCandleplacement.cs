@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RitualCandleplacement : MonoBehaviour
 {
-    int candlenum = 0;
+    public int candlenum = 0;
     public GameObject RCandle;
     public GameObject RCandle1;
     public GameObject RCandle2;

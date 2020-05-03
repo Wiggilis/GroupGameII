@@ -143,6 +143,15 @@ public class PlayerPossesiom : MonoBehaviour
                     }
 
                 }
+
+                if (rhinfo.collider.tag == "TV" && rhinfo.collider.GetComponentInChildren<SpriteRenderer>().enabled == true)
+                {
+                    rhinfo.collider.GetComponentInChildren<SpriteRenderer>().enabled = false;
+                }
+                else if (rhinfo.collider.tag == "TV" && rhinfo.collider.GetComponentInChildren<SpriteRenderer>().enabled == false)
+                {
+                    rhinfo.collider.GetComponentInChildren<SpriteRenderer>().enabled = true;
+                }
             }
         }
         
@@ -254,7 +263,6 @@ public class PlayerPossesiom : MonoBehaviour
         /*HumanRef.GetComponent<NavMeshHumanController>().enabled = true;
         HumanRef.GetComponent<NavMeshHumanController>().agent.enabled = true;*/
 
-        HumanRef.GetComponent<Walkanimation>().Ghost = false;
         
         player.GetComponent<GhostController>().enabled = true; 
         player.transform.position = rhinfo.collider.transform.position;
@@ -272,5 +280,7 @@ public class PlayerPossesiom : MonoBehaviour
         cameraObject.GetComponent<CameraScript>().LookAtObject = player.GetComponent<CameraGuideRefernce>().LookAtRef;
         
         CursorImage.SetActive(false);
+        
+        //HumanRef.GetComponent<Walkanimation>().Ghost = false;
     }
 }
