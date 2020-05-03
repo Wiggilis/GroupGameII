@@ -22,6 +22,7 @@ public class CameraChange : MonoBehaviour
     public GameObject[] HumanMat;
     public GameObject[] LightSource;
     public GameObject[] OtherL;
+    public GameObject[] TV;
 
 
     private void Start()
@@ -30,7 +31,8 @@ public class CameraChange : MonoBehaviour
         HumanMat = GameObject.FindGameObjectsWithTag("HumanMat");
         LightSource = GameObject.FindGameObjectsWithTag("LightSource");
         OtherL = GameObject.FindGameObjectsWithTag("OtherL");
-        MaterialsArray = new Material[interactables.Length + HumanMat.Length + LightSource.Length + OtherL.Length];
+        TV = GameObject.FindGameObjectsWithTag("TV");
+        MaterialsArray = new Material[interactables.Length + HumanMat.Length + LightSource.Length + OtherL.Length + TV.Length];
     }
 
     // Update is called once per frame
@@ -171,6 +173,14 @@ public class CameraChange : MonoBehaviour
             ObjectFound.GetComponent<Renderer>().material = highlightMaterial;
         }
 
+        foreach (GameObject ObjectFound in GameObject.FindGameObjectsWithTag("TV"))
+        {
+            //Do something to ObjectFound, like this:
+            MaterialsArray[i] = ObjectFound.GetComponent<Renderer>().material;
+            i++;
+            ObjectFound.GetComponent<Renderer>().material = highlightMaterial;
+        }
+
         i = 0;
     }
 
@@ -198,6 +208,12 @@ public class CameraChange : MonoBehaviour
         }
 
         foreach (GameObject ObjectFound in GameObject.FindGameObjectsWithTag("OtherL"))
+        {
+            //Do something to ObjectFound, like this:
+            ObjectFound.GetComponent<Renderer>().material = MaterialsArray[i];
+            i++;
+        }
+        foreach (GameObject ObjectFound in GameObject.FindGameObjectsWithTag("TV"))
         {
             //Do something to ObjectFound, like this:
             ObjectFound.GetComponent<Renderer>().material = MaterialsArray[i];

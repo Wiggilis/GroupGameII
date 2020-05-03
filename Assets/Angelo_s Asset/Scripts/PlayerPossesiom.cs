@@ -23,6 +23,9 @@ public class PlayerPossesiom : MonoBehaviour
     public Text countDownTextRef;
     public GameObject TPcam;
 
+    public Material Green;
+    public Material Red;
+
     public  bool isGhost = true;
     public bool isClick = false;
     public bool lightonoff = true;
@@ -146,6 +149,7 @@ public class PlayerPossesiom : MonoBehaviour
 
                 if (rhinfo.collider.tag == "TV" && rhinfo.collider.GetComponentInChildren<SpriteRenderer>().enabled == true)
                 {
+                    print("I am intereacting with the TV");
                     rhinfo.collider.GetComponentInChildren<SpriteRenderer>().enabled = false;
                 }
                 else if (rhinfo.collider.tag == "TV" && rhinfo.collider.GetComponentInChildren<SpriteRenderer>().enabled == false)
